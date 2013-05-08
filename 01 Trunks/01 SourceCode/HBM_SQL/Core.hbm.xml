@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Core" assembly="Core">
+
+  <!--软件系统-->
+  <class name="Core.Architecure.SoftSystem" table="Core_SoftSystem">
+    <id name="GuidString" column ="GuidString">
+      <generator class ="assigned"/>
+    </id>
+    <property name="Version" column="ObjVersion" />
+
+    <property name="SoftName" column="SoftName" />
+    <property name="Caption" column="Caption" />
+    <property name="CreateTime" column="CreateTime" />
+    <property name="LastModifyTime" column="LastModifyTime" />
+    <property name="NameSpaceForClass" column="NameSpaceForClass" />
+    <property name="NameSpaceForDB" column="NameSpaceForDB" />
+    <property name="Author" column="Author" />
+    <property name="SoftVersion" column="SoftVersion" />
+  </class>
+  
+  <!--软件模块-->
+  <class name="Core.Architecure.SoftModule" table="Core_SoftModule">
+    <id name="GuidString" column ="GuidString">
+      <generator class ="assigned"/>
+    </id>
+    <property name="Version" column="ObjVersion" />
+
+    <property name="SoftName" column="SoftName" />
+    <property name="Caption" column="Caption" />
+    <property name="CreateTime" column="CreateTime" />
+    <property name="LastModifyTime" column="LastModifyTime" />
+    <property name="NameSpaceForClass" column="NameSpaceForClass" />
+    <property name="NameSpaceForDB" column="NameSpaceForDB" />
+    <property name="Author" column="Author" />
+    <property name="SoftVersion" column="SoftVersion" />
+
+    <property name="SoftSystemGuidString" column="SoftSystemGuidString" />
+    <property name="ParentModuleGuidString" column="ParentModuleGuidString" />
+
+  </class>
+
+  <!--软件组件-->
+  <class name="Core.Architecure.SoftComponent" table="Core_SysComponent">
+    <id name="GuidString" column ="GuidString">
+      <generator class ="assigned"/>
+    </id>
+
+    <property name="FullClassName" column="FullClassName" />
+    <property name="AssemblyName" column="AssemblyName" />
+    <property name="Author" column="Author" />
+    <property name="Memo" column="Memo" />
+    <property name="RelationObject" column="RelationObject" />
+    <property name="ModuleGuidString" column="ModuleGuidString" />
+    <property name="ObjectType" column="ObjectType" />
+
+
+  </class>
+
+  <!--软件组件-->
+  <class name="Core.Metadata.BusiEntity" table="Core_BusiEntity">
+    <id name="GuidString" column ="GuidString">
+      <generator class ="assigned"/>
+    </id>
+
+    <property name="EntityCode" column="EntityCode" />
+    <property name="EntityName" column="EntityName" />
+    <property name="EntityCatalog" column="EntityCatalog" />
+    <property name="EntityScripe" column="EntityScripe" />
+    <property name="ModuleGuidString" column="ModuleGuidString" />
+    <property name="DeleteFlag" column="DeleteFlag" />
+
+
+    <bag name="DataItemList" inverse="true" lazy="false" cascade="all-delete-orphan">
+      <key column="BusiEntityGuidString"/>
+      <one-to-many class="Core.Metadata.BusiDataItem"/>
+    </bag>
+
+
+  </class>
+
+  <class name="Core.Metadata.BusiDataItem" table="Core_BusiDataItem">
+    <id name="GuidString" column ="GuidString">
+      <generator class ="assigned"/>
+    </id>
+
+    <property name="Caption"      column="Caption" />
+    <property name="Length"   column="DataLength" />
+    
+    <property name="Maximum" column="MaximumValue" />
+    <property name="Minimum" column="MinimumValue" />
+    
+    <property name="AllowNull"    column="AllowNull" />
+    <property name="DeleteFlag"   column="DeleteFlag" />
+
+    <many-to-one name="BusiEntity" class="Core.Metadata.BusiEntity" column="BusiEntityGuidString" not-null="false"/>
+
+
+
+  </class>
+
+
+
+</hibernate-mapping>

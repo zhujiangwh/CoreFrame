@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Core.Architecure.BaseSoftModule">
+    <Position X="2" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBAAAAgAAAAAAAAAgAAAAAAIQAEEAAAACAAIABAAAAg=</HashCode>
+      <FileName>Architecure\SofeModule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ParentModule" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="SubMouduleList" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Core.Architecure.SoftModule">
+    <Position X="3" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAIAAAABAAAAIAAAAAIAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Architecure\SofeModule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ComponentList" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Core.Architecure.SoftSystem">
+    <Position X="0.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAIAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Architecure\SofeModule.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Core.Architecure.WinApplication">
+    <Position X="8" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAICAwIAAAACAAAAAABABAAAAAKAAAAAAAAAI=</HashCode>
+      <FileName>Architecure\WinApplication.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="DBServerManager" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Core.Architecure.Server">
+    <Position X="12" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAgAAQAAAAAAAAAAAAACAACAAA=</HashCode>
+      <FileName>Architecure\Server.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Architecure.RemotingServer">
+    <Position X="13.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Architecure\Server.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Architecure.ObjectDefine">
+    <Position X="5.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Architecure\ObjectDefine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Architecure.SoftComponent">
+    <Position X="5.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAiAAAAAAAAAAAAAACCIAAAAAQAAg=</HashCode>
+      <FileName>Architecure\ObjectDefine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ObjectType" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Core.DB.DBServer">
+    <Position X="10.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACgIACYAAEECACCIBAIAAFgAgAAAAAgSAABQCABACAA=</HashCode>
+      <FileName>Architecure\NHibernate\DBServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Core.Architecure.ObjectType">
+    <Position X="8.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAAAAAAABAgAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Architecure\ObjectDefine.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

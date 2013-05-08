@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="massSendCcdx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDst" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sExNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="smsType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="massSendCcdxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="massSendCcdxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="massSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDst" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sExNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="massSendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="massSendResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="massSendEx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDst" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sExNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bWappush" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="massSendExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="massSendExResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="readSms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="readSmsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="readSmsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="readXmlSms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPosID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="readXmlSmsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="readXmlSmsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFeeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="changePwd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNewPwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="changePwdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="changePwdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="massSendCcdxSoapIn">
+    <wsdl:part name="parameters" element="tns:massSendCcdx" />
+  </wsdl:message>
+  <wsdl:message name="massSendCcdxSoapOut">
+    <wsdl:part name="parameters" element="tns:massSendCcdxResponse" />
+  </wsdl:message>
+  <wsdl:message name="massSendSoapIn">
+    <wsdl:part name="parameters" element="tns:massSend" />
+  </wsdl:message>
+  <wsdl:message name="massSendSoapOut">
+    <wsdl:part name="parameters" element="tns:massSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="massSendExSoapIn">
+    <wsdl:part name="parameters" element="tns:massSendEx" />
+  </wsdl:message>
+  <wsdl:message name="massSendExSoapOut">
+    <wsdl:part name="parameters" element="tns:massSendExResponse" />
+  </wsdl:message>
+  <wsdl:message name="readSmsSoapIn">
+    <wsdl:part name="parameters" element="tns:readSms" />
+  </wsdl:message>
+  <wsdl:message name="readSmsSoapOut">
+    <wsdl:part name="parameters" element="tns:readSmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="readXmlSmsSoapIn">
+    <wsdl:part name="parameters" element="tns:readXmlSms" />
+  </wsdl:message>
+  <wsdl:message name="readXmlSmsSoapOut">
+    <wsdl:part name="parameters" element="tns:readXmlSmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFeeSoapIn">
+    <wsdl:part name="parameters" element="tns:getFee" />
+  </wsdl:message>
+  <wsdl:message name="getFeeSoapOut">
+    <wsdl:part name="parameters" element="tns:getFeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="changePwdSoapIn">
+    <wsdl:part name="parameters" element="tns:changePwd" />
+  </wsdl:message>
+  <wsdl:message name="changePwdSoapOut">
+    <wsdl:part name="parameters" element="tns:changePwdResponse" />
+  </wsdl:message>
+  <wsdl:message name="massSendCcdxHttpGetIn">
+    <wsdl:part name="sName" type="s:string" />
+    <wsdl:part name="sPwd" type="s:string" />
+    <wsdl:part name="sDst" type="s:string" />
+    <wsdl:part name="sMsg" type="s:string" />
+    <wsdl:part name="sTime" type="s:string" />
+    <wsdl:part name="sExNo" type="s:string" />
+    <wsdl:part name="smsType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="massSendCcdxHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="massSendHttpGetIn">
+    <wsdl:part name="sName" type="s:string" />
+    <wsdl:part name="sPwd" type="s:string" />
+    <wsdl:part name="sDst" type="s:string" />
+    <wsdl:part name="sMsg" type="s:string" />
+    <wsdl:part name="sTime" type="s:string" />
+    <wsdl:part name="sExNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="massSendHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="massSendExHttpGetIn">
+    <wsdl:part name="sName" type="s:string" />
+    <wsdl:part name="sPwd" type="s:string" />
+    <wsdl:part name="sDst" type="s:string" />
+    <wsdl:part name="sMsg" type="s:string" />
+    <wsdl:part name="sTime" type="s:string" />
+    <wsdl:part name="sExNo" type="s:string" />
+    <wsdl:part name="bWappush" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="massSendExHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="readSmsHttpGetIn">
+    <wsdl:part name="sName" type="s:string" />
+    <wsdl:part name="sPwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="readSmsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="readXmlSmsHttpGetIn">
+    <wsdl:part name="sName" type="s:string" />
+    <wsdl:part name="sPwd" type="s:string" />
+    <wsdl:part name="sPosID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="readXmlSmsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFeeHttpGetIn">
+    <wsdl:part name="sName" type="s:string" />
+    <wsdl:part name="sPwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFeeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="changePwdHttpGetIn">
+    <wsdl:part name="sName" type="s:string" />
+    <wsdl:part name="sPwd" type="s:string" />
+    <wsdl:part name="sNewPwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="changePwdHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="massSendCcdxHttpPostIn">
+    <wsdl:part name="sName" type="s:string" />
+    <wsdl:part name="sPwd" type="s:string" />
+    <wsdl:part name="sDst" type="s:string" />
+    <wsdl:part name="sMsg" type="s:string" />
+    <wsdl:part name="sTime" type="s:string" />
+    <wsdl:part name="sExNo" type="s:string" />
+    <wsdl:part name="smsType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="massSendCcdxHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="massSendHttpPostIn">
+    <wsdl:part name="sName" type="s:string" />
+    <wsdl:part name="sPwd" type="s:string" />
+    <wsdl:part name="sDst" type="s:string" />
+    <wsdl:part name="sMsg" type="s:string" />
+    <wsdl:part name="sTime" type="s:string" />
+    <wsdl:part name="sExNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="massSendHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="massSendExHttpPostIn">
+    <wsdl:part name="sName" type="s:string" />
+    <wsdl:part name="sPwd" type="s:string" />
+    <wsdl:part name="sDst" type="s:string" />
+    <wsdl:part name="sMsg" type="s:string" />
+    <wsdl:part name="sTime" type="s:string" />
+    <wsdl:part name="sExNo" type="s:string" />
+    <wsdl:part name="bWappush" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="massSendExHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="readSmsHttpPostIn">
+    <wsdl:part name="sName" type="s:string" />
+    <wsdl:part name="sPwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="readSmsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="readXmlSmsHttpPostIn">
+    <wsdl:part name="sName" type="s:string" />
+    <wsdl:part name="sPwd" type="s:string" />
+    <wsdl:part name="sPosID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="readXmlSmsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getFeeHttpPostIn">
+    <wsdl:part name="sName" type="s:string" />
+    <wsdl:part name="sPwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFeeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="changePwdHttpPostIn">
+    <wsdl:part name="sName" type="s:string" />
+    <wsdl:part name="sPwd" type="s:string" />
+    <wsdl:part name="sNewPwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="changePwdHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="MainServicesSoap">
+    <wsdl:operation name="massSendCcdx">
+      <wsdl:input message="tns:massSendCcdxSoapIn" />
+      <wsdl:output message="tns:massSendCcdxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="massSend">
+      <wsdl:input message="tns:massSendSoapIn" />
+      <wsdl:output message="tns:massSendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="massSendEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">带短信类型参数发送</wsdl:documentation>
+      <wsdl:input message="tns:massSendExSoapIn" />
+      <wsdl:output message="tns:massSendExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="readSms">
+      <wsdl:input message="tns:readSmsSoapIn" />
+      <wsdl:output message="tns:readSmsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="readXmlSms">
+      <wsdl:input message="tns:readXmlSmsSoapIn" />
+      <wsdl:output message="tns:readXmlSmsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFee">
+      <wsdl:input message="tns:getFeeSoapIn" />
+      <wsdl:output message="tns:getFeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="changePwd">
+      <wsdl:input message="tns:changePwdSoapIn" />
+      <wsdl:output message="tns:changePwdSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MainServicesHttpGet">
+    <wsdl:operation name="massSendCcdx">
+      <wsdl:input message="tns:massSendCcdxHttpGetIn" />
+      <wsdl:output message="tns:massSendCcdxHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="massSend">
+      <wsdl:input message="tns:massSendHttpGetIn" />
+      <wsdl:output message="tns:massSendHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="massSendEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">带短信类型参数发送</wsdl:documentation>
+      <wsdl:input message="tns:massSendExHttpGetIn" />
+      <wsdl:output message="tns:massSendExHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="readSms">
+      <wsdl:input message="tns:readSmsHttpGetIn" />
+      <wsdl:output message="tns:readSmsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="readXmlSms">
+      <wsdl:input message="tns:readXmlSmsHttpGetIn" />
+      <wsdl:output message="tns:readXmlSmsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFee">
+      <wsdl:input message="tns:getFeeHttpGetIn" />
+      <wsdl:output message="tns:getFeeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="changePwd">
+      <wsdl:input message="tns:changePwdHttpGetIn" />
+      <wsdl:output message="tns:changePwdHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MainServicesHttpPost">
+    <wsdl:operation name="massSendCcdx">
+      <wsdl:input message="tns:massSendCcdxHttpPostIn" />
+      <wsdl:output message="tns:massSendCcdxHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="massSend">
+      <wsdl:input message="tns:massSendHttpPostIn" />
+      <wsdl:output message="tns:massSendHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="massSendEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">带短信类型参数发送</wsdl:documentation>
+      <wsdl:input message="tns:massSendExHttpPostIn" />
+      <wsdl:output message="tns:massSendExHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="readSms">
+      <wsdl:input message="tns:readSmsHttpPostIn" />
+      <wsdl:output message="tns:readSmsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="readXmlSms">
+      <wsdl:input message="tns:readXmlSmsHttpPostIn" />
+      <wsdl:output message="tns:readXmlSmsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFee">
+      <wsdl:input message="tns:getFeeHttpPostIn" />
+      <wsdl:output message="tns:getFeeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="changePwd">
+      <wsdl:input message="tns:changePwdHttpPostIn" />
+      <wsdl:output message="tns:changePwdHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MainServicesSoap" type="tns:MainServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="massSendCcdx">
+      <soap:operation soapAction="http://tempuri.org/massSendCcdx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="massSend">
+      <soap:operation soapAction="http://tempuri.org/massSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="massSendEx">
+      <soap:operation soapAction="http://tempuri.org/massSendEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readSms">
+      <soap:operation soapAction="http://tempuri.org/readSms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readXmlSms">
+      <soap:operation soapAction="http://tempuri.org/readXmlSms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFee">
+      <soap:operation soapAction="http://tempuri.org/getFee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePwd">
+      <soap:operation soapAction="http://tempuri.org/changePwd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MainServicesSoap12" type="tns:MainServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="massSendCcdx">
+      <soap12:operation soapAction="http://tempuri.org/massSendCcdx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="massSend">
+      <soap12:operation soapAction="http://tempuri.org/massSend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="massSendEx">
+      <soap12:operation soapAction="http://tempuri.org/massSendEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readSms">
+      <soap12:operation soapAction="http://tempuri.org/readSms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readXmlSms">
+      <soap12:operation soapAction="http://tempuri.org/readXmlSms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFee">
+      <soap12:operation soapAction="http://tempuri.org/getFee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePwd">
+      <soap12:operation soapAction="http://tempuri.org/changePwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MainServicesHttpGet" type="tns:MainServicesHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="massSendCcdx">
+      <http:operation location="/massSendCcdx" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="massSend">
+      <http:operation location="/massSend" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="massSendEx">
+      <http:operation location="/massSendEx" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readSms">
+      <http:operation location="/readSms" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readXmlSms">
+      <http:operation location="/readXmlSms" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFee">
+      <http:operation location="/getFee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePwd">
+      <http:operation location="/changePwd" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MainServicesHttpPost" type="tns:MainServicesHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="massSendCcdx">
+      <http:operation location="/massSendCcdx" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="massSend">
+      <http:operation location="/massSend" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="massSendEx">
+      <http:operation location="/massSendEx" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readSms">
+      <http:operation location="/readSms" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readXmlSms">
+      <http:operation location="/readXmlSms" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFee">
+      <http:operation location="/getFee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="changePwd">
+      <http:operation location="/changePwd" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MainServices">
+    <wsdl:port name="MainServicesSoap" binding="tns:MainServicesSoap">
+      <soap:address location="http://www.139000.com/send/MainServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MainServicesSoap12" binding="tns:MainServicesSoap12">
+      <soap12:address location="http://www.139000.com/send/MainServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MainServicesHttpGet" binding="tns:MainServicesHttpGet">
+      <http:address location="http://www.139000.com/send/MainServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MainServicesHttpPost" binding="tns:MainServicesHttpPost">
+      <http:address location="http://www.139000.com/send/MainServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

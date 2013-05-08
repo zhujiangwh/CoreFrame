@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WinApplication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Caption>Core 服务端程序</Caption>
+  <MainFormDefine AssemblyName="Server" FullClassName="Server.Form1" />
+  <SplashFormDefine AssemblyName="Server" FullClassName="Server.SplashForm" />
+  <DBServerManager>
+    <DBServerList>
+      <DBServer Name="名字" Code="代码" Text="说明" IPAddress="vmxp" DataBaseType="SQLServer" Database="Core" UserID="sa" Password="gambol" MinPoolSize="5" MaxPoolSize="50" Nh_connection_driver_class="NHibernate.Driver.SqlClientDriver" Nh_dialect="NHibernate.Dialect.MsSql2008Dialect" Nh_Show_sql="true" Nh_adonet_batchsize="100" Nh_command_timeout="10" Nh_query_substitutions="true 1, false 0, yes 'Y', no 'N'">
+        <HBMAssemblyList>
+          <string>HBM_SQL</string>
+        </HBMAssemblyList>
+      </DBServer>
+      <DBServer Name="名字" Code="代码" Text="说明" IPAddress="" DataBaseType="Sqlite" Database="DB\CoreDB" UserID="" Password="" MinPoolSize="5" MaxPoolSize="50" Nh_connection_driver_class="NHibernate.Driver.SQLite20Driver" Nh_dialect="NHibernate.Dialect.SQLiteDialect" Nh_Show_sql="true" Nh_adonet_batchsize="100" Nh_command_timeout="10" Nh_query_substitutions="true 1, false 0, yes 'Y', no 'N'">
+        <HBMAssemblyList>
+          <string>HBM_SQLite</string>
+        </HBMAssemblyList>
+      </DBServer>
+    </DBServerList>
+  </DBServerManager>
+  <RemotingServer IPAddress="s" Protocol="dsf" />
+  <IsUseRemoting>true</IsUseRemoting>
+  <IsDisplayFlashForm>true</IsDisplayFlashForm>
+</WinApplication>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Core.Authority.OnlineUser">
+    <Position X="5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIRAAAAAAAAAAAAAAAAAAAoAQAAAAAAAAAAQCAAAAAA=</HashCode>
+      <FileName>Authority\OnlineUser.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="RunLogList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Core.Authority.User">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Authority\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Authority.UserLoginInfo">
+    <Position X="2.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAgAAAAAAAACAAAAAAACAAA=</HashCode>
+      <FileName>Authority\UserLoginInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Authority.RunLog">
+    <Position X="7.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAQAAAAAAAECAAAAAAAAAgBAAgAAAEBAAAAAA=</HashCode>
+      <FileName>Authority\RunLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Authority.Function">
+    <Position X="7.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAQAKAAKAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Authority\FunctionID.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Core.Authority.IAuthorityService">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Authority\IAuthorityService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

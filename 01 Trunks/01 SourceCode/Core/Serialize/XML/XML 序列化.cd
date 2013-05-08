@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Core.Serialize.XML.XmlSerializeDefine">
+    <Position X="7.75" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACQAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Serialize\XML\XmlSerializeDefine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Serialize.XML.XmlSerializeService">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAgAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Serialize\XML\XmlSerializeService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Serialize.XML.XmlSerializeDefineManager">
+    <Position X="4.5" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAQACAAAgAAAwAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Serialize\XML\XmlSerializeDefine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="XmlSerializeDefineList" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Core.Serialize.XML.XmlSerialize">
+    <Position X="0.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAAAAIAAAAACAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Serialize\XML\XmlSerialize.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Core.Serialize.XML.IXmlSerialize">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAwAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Serialize\XML\IXmlSerialize.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Core.Metadata.HBMDesign.HBMBlockDefine">
+    <Position X="1" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAIAAAAAAAACACAA=</HashCode>
+      <FileName>Metadata\HBMDesign\HBMDefine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="HBMClassDefineList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Core.Metadata.HBMDesign.HBMClassDefine">
+    <Position X="4.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAYAQAAAAAAAAAAAIAAAAAAQCAAAA=</HashCode>
+      <FileName>Metadata\HBMDesign\HBMDefine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IDDefine" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PropertyDefineList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Core.Metadata.HBMDesign.HBMPropertyDefine">
+    <Position X="6.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAACAAAAAAAAAAADAAAA=</HashCode>
+      <FileName>Metadata\HBMDesign\HBMDefine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Metadata.HBMDesign.HBMIDDefine">
+    <Position X="6.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Metadata\HBMDesign\HBMDefine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

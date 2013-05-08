@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Core.Metadata.BusiEntity">
+    <Position X="11.25" Y="4.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAIAAQIAAAAAAAAACAAAEAAA4AgCAAABSABCAAAAAAg=</HashCode>
+      <FileName>Metadata\Entity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="DataItemList" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Core.Metadata.BaseDataItem">
+    <Position X="6.25" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>hAAAAACBAAAAAAAACIAAAARAEABAAAAQiAAQAAAAAAg=</HashCode>
+      <FileName>Metadata\DataItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BusiType" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Core.Metadata.Domain">
+    <Position X="4.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Metadata\Domain.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ClassPropertyDefine" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Core.Metadata.BusiDataItem">
+    <Position X="7.25" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Metadata\DataItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BusiEntity" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Core.Metadata.DataItemDisplayer">
+    <Position X="7.75" Y="8.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AwQAEIAAAAggMAAQgAFAAgBIAAAwAAwAAACAAQAAAAA=</HashCode>
+      <FileName>Metadata\DisplayDefine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.BusiType.BillIDField">
+    <Position X="3.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusiType\BillIDField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.Metadata.CSharpDesign.ClassPropertyDefine">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAACAAAIADAAAA=</HashCode>
+      <FileName>Metadata\CSharpDesign\CSharpClassDefing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Core.Metadata.BusinessType">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAgAAAgQAAAAAAAAAAAABAAAAAACABAACA=</HashCode>
+      <FileName>Metadata\TypeManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

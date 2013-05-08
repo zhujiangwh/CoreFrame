@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<?xml version="1.0" encoding="utf-8"?>
+<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2" >
+	<session-factory name="NHibernate.Test">
+		--><!--<property name="connection.driver_class">NHibernate.Driver.OracleClientDriver</property>--><!--
+    <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+
+    <property name="connection.connection_string">
+      --><!--Data source=vmxp/xe;User Id=dev;Password=dev;Min Pool Size=5;Max Pool Size=50--><!--
+      Data source=vmxp; Initial Catalog=Core; User Id=sa;Password=gambol;Min Pool Size=5;Max Pool Size=50
+
+      --><!--Data source=192.168.90.200; Initial Catalog=HRM; User Id=sa;Password=123;Min Pool Size=5;Max Pool Size=50--><!--
+
+
+    </property>
+		<property name="adonet.batch_size">100</property>
+    <property name="show_sql">true</property>
+		--><!--<property name="dialect">NHibernate.Dialect.Oracle9Dialect</property>--><!--
+    <property name="dialect">NHibernate.Dialect.MsSql2005Dialect</property>
+
+    <property name="use_outer_join">true</property>
+		<property name="command_timeout">10</property>
+		<property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
+		--><!--<mapping assembly="JZT.Common"/>--><!--
+    <mapping assembly="HRM_SQL"/>
+	</session-factory>
+</hibernate-configuration>-->
+
+<!--NHibernate.Dialect.SQLiteDialect-->
+
+
+
+<!-- 
+This template was written to work with NHibernate.Test.
+Copy the template to your NHibernate.Test project folder and rename it in hibernate.cfg.xml and change it 
+for your own use before compile tests in VisualStudio.
+-->
+<!-- This is the System.Data.dll provider for SQL Server -->
+<!--<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2" >
+  <session-factory name="NHibernate">
+    <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+    <property name="connection.connection_string">
+      Data source=vmxp; Initial Catalog=Corect; User Id=sa;Password=gambol;Min Pool Size=5;Max Pool Size=50
+    </property>
+    <property name="dialect">NHibernate.Dialect.MsSql2008Dialect</property>
+    <property name="adonet.batch_size">100</property>
+    <property name="show_sql">true</property>
+    <mapping assembly="HBM_SQL"/>
+  </session-factory> NHibernate.Dialect.SQLiteDialect
+</hibernate-configuration>-->
+
+<!--<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2" >
+  <session-factory name="NHibernate">
+    <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+    <property name="connection.connection_string">
+      Data source=vmxp; Initial Catalog=Corect; User Id=sa;Password=gambol;Min Pool Size=5;Max Pool Size=50
+    </property>
+    <property name="dialect">NHibernate.Dialect.MsSql2008Dialect</property>
+    <property name="adonet.batch_size">100</property>
+    <property name="show_sql">true</property>
+    <mapping assembly="HBM_SQL"/>
+  </session-factory>
+</hibernate-configuration>-->
+
+<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2" >
+  <session-factory >
+    <property name="connection.driver_class">NHibernate.Driver.SQLite20Driver</property>
+    <property name="connection.connection_string">
+      Data Source=DB\CoreDB
+    </property>
+    <property name="dialect">NHibernate.Dialect.SQLiteDialect</property>
+    <property name="adonet.batch_size">100</property>
+    <property name="show_sql">true</property>
+    <property name="command_timeout">10</property>
+    <property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
+
+    <mapping assembly="HBM_SQLite"/>
+  </session-factory>
+</hibernate-configuration>
+
+
+<!--<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2" >
+  <session-factory name="NHibernate.Test">
+    <property name="connection.driver_class">NHibernate.Driver.OracleClientDriver</property>
+    <property name="connection.connection_string">
+
+      --><!--开发服务器--><!--
+      Data source=192.168.90.151/center;User Id=devcenter;Password=devcenter;Min Pool Size=5;Max Pool Size=50
+
+
+    </property>
+    <property name="adonet.batch_size">100</property>
+    <property name="show_sql">true</property>
+    <property name="dialect">NHibernate.Dialect.Oracle9Dialect</property>
+    <property name="use_outer_join">true</property>
+    <property name="command_timeout">10</property>
+    <property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
+    --><!--<mapping assembly="JZT.GOS.Modal"/>--><!--
+    <mapping assembly="JZT.Common"/>
+    --><!--<mapping assembly="JZT.Report.Modal"/>--><!--
+  </session-factory>
+</hibernate-configuration>-->
+
+
+
+

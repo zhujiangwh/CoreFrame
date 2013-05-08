@@ -1,0 +1,5 @@
+
+  <class name="{0}" table="{1}">
+
+{2}
+  </class>

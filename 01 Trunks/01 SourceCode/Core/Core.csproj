@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B18165AE-E2D8-4E48-BA45-1BABDCCE8830}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Share Library\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Architecure\IArchitectureService.cs" />
+    <Compile Include="Architecure\NHibernate\DBServer.cs" />
+    <Compile Include="Architecure\NHibernate\NHiberanteService.cs" />
+    <Compile Include="Architecure\NHibernate\SessionManager.cs" />
+    <Compile Include="Architecure\QuitService.cs" />
+    <Compile Include="Architecure\Server.cs" />
+    <Compile Include="Architecure\SofeModule.cs" />
+    <Compile Include="Architecure\StartService.cs" />
+    <Compile Include="Architecure\WinApplication.cs" />
+    <Compile Include="Authority\AuthorityControl.cs" />
+    <Compile Include="Authority\FunctionID.cs" />
+    <Compile Include="Authority\IAuthorityDisplay.cs" />
+    <Compile Include="Authority\IAuthorityService.cs" />
+    <Compile Include="Authority\OnlineUser.cs" />
+    <Compile Include="Authority\RunLog.cs" />
+    <Compile Include="Authority\User.cs" />
+    <Compile Include="Authority\UserLoginInfo.cs" />
+    <Compile Include="BusiType\BillIDField.cs" />
+    <Compile Include="Common\BaseObject.cs" />
+    <Compile Include="Architecure\ObjectDefine.cs" />
+    <Compile Include="Common\CommonInterface.cs" />
+    <Compile Include="Common\ICommonObjectService.cs" />
+    <Compile Include="Common\LevelString.cs" />
+    <Compile Include="Common\ObjectConfig.cs" />
+    <Compile Include="Metadata\CSharpDesign\CSharpClassDefing.cs" />
+    <Compile Include="Metadata\DataItem.cs" />
+    <Compile Include="Metadata\DisplayDefine.cs" />
+    <Compile Include="Metadata\Domain.cs" />
+    <Compile Include="Metadata\Entity.cs" />
+    <Compile Include="Metadata\HBMDesign\HBMDefine.cs" />
+    <Compile Include="Metadata\IEntityService.cs" />
+    <Compile Include="Metadata\SQLDesign\SQLDefine.cs" />
+    <Compile Include="Metadata\TypeManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Architecure\StartAndQuitService.cd" />
+    <None Include="Architecure\体系结构.cd" />
+    <None Include="Authority\Authority.cd" />
+    <None Include="Metadata\CSharpDesign\CSharpClassDefine.cd" />
+    <None Include="Metadata\HBMDesign\HBM Design.cd" />
+    <None Include="Metadata\Metadata.cd" />
+    <None Include="Metadata\SQLDesign\SQL Define.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Serialize\XML\XML 序列化.cd" />
+    <None Include="UI\UI.cd" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Serialize\DB\SqlScript.cs" />
+    <Compile Include="Serialize\DB\SqlParam.cs" />
+    <Compile Include="Serialize\IObjectSerialize.cs" />
+    <Compile Include="Serialize\XML\IXmlSerialize.cs" />
+    <Compile Include="Serialize\XML\XmlSerialize.cs" />
+    <Compile Include="Serialize\XML\XmlSerializeDefine.cs" />
+    <Compile Include="Serialize\XML\XmlSerializeService.cs" />
+    <Compile Include="UI\BaseControlAdapter.cs" />
+    <Compile Include="UI\CommonUIinteractive.cs" />
+    <Compile Include="UI\EditAllObjectUIC.cs" />
+    <Compile Include="UI\EditSingleObjectUIC.cs" />
+    <Compile Include="UI\ISelectObjectService.cs" />
+    <Compile Include="UI\SelectObjectUIC.cs" />
+    <Compile Include="UI\UIDisplayObject.cs" />
+    <Compile Include="UI\UIinteractive.cs" />
+    <Compile Include="Utility\Exception\BizException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\HBMOracle.txt" />
+    <Content Include="Resources\HBMOracle1.txt" />
+    <Content Include="Resources\HBMOracleCol.txt" />
+    <Content Include="Resources\SQLBlock.txt" />
+    <Content Include="Resources\SQLTable.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JZT.Utility\JZT.Utility.csproj">
+      <Project>{51B7F628-5AC5-47B0-8175-A827D4D8E309}</Project>
+      <Name>JZT.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Message\Email\" />
+    <Folder Include="Message\Fax\" />
+    <Folder Include="Message\Mobile\" />
+    <Folder Include="Message\QQ\" />
+    <Folder Include="Organization\" />
+    <Folder Include="SelfTest\" />
+    <Folder Include="Utility\Cache\" />
+    <Folder Include="Utility\Express\" />
+    <Folder Include="Utility\Log\" />
+    <Folder Include="Utility\Sink\" />
+    <Folder Include="Utility\Thread\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

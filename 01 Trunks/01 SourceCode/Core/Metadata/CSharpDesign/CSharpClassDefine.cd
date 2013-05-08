@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Core.Metadata.CSharpDesign.CSharpClassDefine">
+    <Position X="2.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAEAAAAASAAACASAAAAAAACAAAAAAAAAAAAACACAA=</HashCode>
+      <FileName>Metadata\CSharpDesign\CSharpClassDefing.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PropertyDefineList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Core.Metadata.CSharpDesign.ClassPropertyDefine">
+    <Position X="6" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAACAAAIADAAAA=</HashCode>
+      <FileName>Metadata\CSharpDesign\CSharpClassDefing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

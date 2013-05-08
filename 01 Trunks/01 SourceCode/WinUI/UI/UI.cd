@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Core.UI.UIControlDefine">
+    <Position X="6.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAEAAAAAAAAAAQAAIAAAEwAAAAIAAAACAAACAAAAAQ=</HashCode>
+      <FileName>UI\ControlCreater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.UI.ControlCreater">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAEAAAAAgAAAEAAAAAAAAAACAA=</HashCode>
+      <FileName>UI\ControlCreater.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ControlDefineList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

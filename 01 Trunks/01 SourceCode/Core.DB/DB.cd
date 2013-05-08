@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Core.DB.NHiberanteConfig">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAQABAQAAAABAQAEAAAAAAAAAAA=</HashCode>
+      <FileName>DBServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Core.DB.DBServer">
+    <Position X="3.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAACCIAAAIAEAAAAAAAAAAAAAACABACAA=</HashCode>
+      <FileName>DBServer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="NHiberanteConfig" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Core.DB.DBServerL">
+    <Position X="6.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAQAAAABABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DBServer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="DBServerList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Core.DB.NHibernate.NHiberanteService">
+    <Position X="6.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEIAAACAAIQAAAACAAAAAAAEAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>NHibernate\NHiberanteService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="DBServerL" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>
