@@ -9,6 +9,8 @@ namespace Core.Serialize.XML
     {
         string GetFileName();
 
+        string GetFileName(string key);
+
         string GetPath();
 
         /// <summary>

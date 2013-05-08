@@ -20,7 +20,7 @@ namespace Core.Serialize
         /// <param name="obj"></param>
         void Delete(object obj);
 
-        void GetObject(string Key);
+        T GetObject<T>(string Key);
 
         /// <summary>
         /// 物理删除

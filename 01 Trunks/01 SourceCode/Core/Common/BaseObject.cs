@@ -32,5 +32,15 @@ namespace Core.Common
         }
 
         #endregion
+
+        #region IXmlSerialize 成员
+
+
+        public string GetFileName(string key)
+        {
+            return "";
+        }
+
+        #endregion
     }
 }

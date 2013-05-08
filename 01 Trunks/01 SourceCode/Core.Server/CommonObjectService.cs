@@ -74,6 +74,14 @@ namespace Core.Server
 
         #region ICommonObjectService 成员
 
+        public T GetObject<T>(string key)
+        {
+            Bo bo = new Bo(objectSerialize);
+
+            return bo.GetObject<T>(key);
+        }
+
+
         public object Create(object obj)
         {
             //获取扩展对象
@@ -232,6 +240,9 @@ namespace Core.Server
             //return service.XmlSerializeDefineManager.XmlSerializeDefineList;
         }
 
+  
+
+  
         #endregion
     }
 
@@ -246,6 +257,16 @@ namespace Core.Server
         }
 
         #region ICommonObjectService 成员
+
+
+        public T GetObject<T>(string key)
+        {
+
+
+            return objectSerialize.GetObject<T>(key) ;
+
+        }
+
 
         public object Create(object obj)
         {

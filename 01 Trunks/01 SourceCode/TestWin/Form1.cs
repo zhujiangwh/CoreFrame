@@ -81,24 +81,24 @@ namespace TestWin
 
         private void button3_Click(object sender, EventArgs e)
         {
-            controlCreater = StreamTool.DeserializeXml<ControlCreater>("sdf.xml");
+            //controlCreater = StreamTool.DeserializeXml<ControlCreater>("sdf.xml");
 
-            BusiDataItem dataItem = new BusiDataItem();
-            dataItem.Caption = "Cation";
-            dataItem.Name = "property";
-            dataItem.ControlTypeName = "System.Windows.Forms.Label";
+            //BusiDataItem dataItem = new BusiDataItem();
+            //dataItem.Caption = "Cation";
+            //dataItem.Name = "property";
+            //dataItem.ControlTypeName = "System.Windows.Forms.Label";
 
-            BusiDataItem dataItem1 = new BusiDataItem();
-            dataItem1.Caption = "标题";
-            dataItem1.Name = "属性";
-            dataItem1.ControlTypeName = "System.Windows.Forms.Button";
+            //BusiDataItem dataItem1 = new BusiDataItem();
+            //dataItem1.Caption = "标题";
+            //dataItem1.Name = "属性";
+            //dataItem1.ControlTypeName = "System.Windows.Forms.Button";
 
 
-            //把数据项生成控件。
-            controlCreater.UIControlDefineList.AddRange(
-                controlCreater.CreateUIControlDefine(dataItem));
-            controlCreater.UIControlDefineList.AddRange(
-                controlCreater.CreateUIControlDefine(dataItem1));
+            ////把数据项生成控件。
+            //controlCreater.UIControlDefineList.AddRange(
+            //    controlCreater.CreateUIControlDefine(dataItem));
+            //controlCreater.UIControlDefineList.AddRange(
+            //    controlCreater.CreateUIControlDefine(dataItem1));
 
 
             controlCreater.ParentControl = this.panel1;
@@ -135,6 +135,17 @@ namespace TestWin
             CommonObjectService service = new CommonObjectService(new XmlSerialize());
 
             service.Create(controlCreater);
+
+            
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            CommonObjectService service = new CommonObjectService(new XmlSerialize());
+
+            controlCreater = service.GetObject<ControlCreater>("formde") ;
+
 
 
         }

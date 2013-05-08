@@ -35,8 +35,10 @@ namespace Core.Serialize.XML
             //逻辑删除后保存文件
         }
 
-        public void GetObject(string Key)
+        public T GetObject<T>(string Key)
         {
+            // 
+            return StreamTool.DeserializeXml<T>(string.Format("{0}.xml",Key));
         }
 
         public void RealDelete(object obj)

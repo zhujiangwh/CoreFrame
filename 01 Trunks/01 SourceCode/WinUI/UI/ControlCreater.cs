@@ -200,5 +200,15 @@ namespace Core.UI
         }
 
         #endregion
+
+        #region IXmlSerialize 成员
+
+
+        public string GetFileName(string key)
+        {
+            return string.Format("{0}.xml", key);
+        }
+
+        #endregion
     }
 }

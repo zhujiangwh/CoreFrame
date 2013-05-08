@@ -28,6 +28,8 @@ namespace Core.Common
         /// <param name="obj"></param>
         void Delete(object obj);
 
+        T GetObject<T>(string key);
+
         IList GetObject(SqlScript sqlScript);
 
         /// <summary>

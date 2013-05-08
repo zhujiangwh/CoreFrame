@@ -134,6 +134,7 @@
     <Compile Include="Serialize\DB\SqlScript.cs" />
     <Compile Include="Serialize\DB\SqlParam.cs" />
     <Compile Include="Serialize\IObjectSerialize.cs" />
+    <Compile Include="Serialize\XML\ControlCreater.cs" />
     <Compile Include="Serialize\XML\IXmlSerialize.cs" />
     <Compile Include="Serialize\XML\XmlSerialize.cs" />
     <Compile Include="Serialize\XML\XmlSerializeDefine.cs" />

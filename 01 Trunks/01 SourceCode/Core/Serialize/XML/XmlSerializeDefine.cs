@@ -91,5 +91,15 @@ namespace Core.Serialize.XML
 
 
 
+
+        #region IXmlSerialize 成员
+
+
+        public string GetFileName(string key)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
     }
 }
