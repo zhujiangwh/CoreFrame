@@ -44,6 +44,7 @@ namespace TestWin
             c2.Heigth = 100;
 
  
+            //测试一下代码。
 
 
             controlCreater.UIControlDefineList.Add(c1);
