@@ -101,6 +101,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Core.Server\Core.Server.csproj">
+      <Project>{404198D0-F0BF-45E4-9DCA-08026DB6CE24}</Project>
+      <Name>Core.Server</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Core\Core.csproj">
       <Project>{B18165AE-E2D8-4E48-BA45-1BABDCCE8830}</Project>
       <Name>Core</Name>

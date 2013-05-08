@@ -10,6 +10,8 @@ using Core.UI;
 using JZT.Utility;
 using Core.Architecure;
 using Core.Metadata;
+using Core.Server;
+using Core.Serialize.XML;
 
 namespace TestWin
 {
@@ -125,6 +127,15 @@ namespace TestWin
         {
             BusiDataItem dataItem = new BusiDataItem();
             dataItem.Caption = "Cation";
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            CommonObjectService service = new CommonObjectService(new XmlSerialize());
+
+            service.Create(controlCreater);
+
 
         }
     }

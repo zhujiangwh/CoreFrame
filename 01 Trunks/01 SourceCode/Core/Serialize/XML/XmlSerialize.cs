@@ -19,6 +19,8 @@ namespace Core.Serialize.XML
                 //保存到文件。
                 string fileName = xs.GetFileName();
 
+                //string fileName = "sdsdfj.xml";
+
                 StreamTool.SerializeXML(obj, fileName);
             }
         }

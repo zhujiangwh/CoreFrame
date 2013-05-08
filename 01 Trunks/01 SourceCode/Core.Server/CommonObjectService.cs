@@ -27,11 +27,16 @@ namespace Core.Server
             objectSerialize = new XmlSerialize();
         }
 
+        public CommonObjectService(IObjectSerialize ser)
+        {
+            objectSerialize = ser;
+        }
+
+
         private Bo GetBO(object obj)
         {
-            Bo bo = new Bo();
-            bo.objectSerialize = objectSerialize;
-
+            Bo bo = new Bo(objectSerialize);
+ 
             return bo;
         }
 
@@ -233,7 +238,12 @@ namespace Core.Server
 
     public class Bo : ICommonObjectService, ICommonBusiObject
     {
-        public IObjectSerialize objectSerialize { get; set; }
+        private IObjectSerialize objectSerialize { get; set; }
+
+        public Bo(IObjectSerialize ser)
+        {
+            objectSerialize = ser;
+        }
 
         #region ICommonObjectService 成员
 

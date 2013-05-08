@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBM_SQLite", "HBM_SQLite\HB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWin", "TestWin\TestWin.csproj", "{F3D5D7F7-4087-48A7-B7BA-15B8299E269A}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{0EDF779E-A8DB-46F3-983B-901FEF9A6ABD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -121,6 +123,12 @@ Global
 		{F3D5D7F7-4087-48A7-B7BA-15B8299E269A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F3D5D7F7-4087-48A7-B7BA-15B8299E269A}.Release|x64.ActiveCfg = Release|Any CPU
 		{F3D5D7F7-4087-48A7-B7BA-15B8299E269A}.Release|x86.ActiveCfg = Release|Any CPU
+		{0EDF779E-A8DB-46F3-983B-901FEF9A6ABD}.Debug|Any CPU.ActiveCfg = Debug
+		{0EDF779E-A8DB-46F3-983B-901FEF9A6ABD}.Debug|x64.ActiveCfg = Debug
+		{0EDF779E-A8DB-46F3-983B-901FEF9A6ABD}.Debug|x86.ActiveCfg = Debug
+		{0EDF779E-A8DB-46F3-983B-901FEF9A6ABD}.Release|Any CPU.ActiveCfg = Release
+		{0EDF779E-A8DB-46F3-983B-901FEF9A6ABD}.Release|x64.ActiveCfg = Release
+		{0EDF779E-A8DB-46F3-983B-901FEF9A6ABD}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

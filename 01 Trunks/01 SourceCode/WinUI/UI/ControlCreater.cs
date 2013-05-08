@@ -7,6 +7,7 @@ using Core.Architecure;
 using System.Reflection;
 using System.Xml.Serialization;
 using Core.Metadata;
+using Core.Serialize.XML;
 
 namespace Core.UI
 {
@@ -77,16 +78,19 @@ namespace Core.UI
 
     }
 
-    public class ControlCreater
+    public class ControlCreater : IXmlSerialize
     {
         [XmlIgnore]
         public Control ParentControl { get; set; }
+
+        public virtual string Text { get; set; }
 
         public List<UIControlDefine> UIControlDefineList { get; set; }
 
         public ControlCreater()
         {
             UIControlDefineList = new List<UIControlDefine>();
+            Text = "text";
         }
 
 
@@ -172,5 +176,29 @@ namespace Core.UI
 
 
 
+
+        #region IXmlSerialize 成员
+
+        public string GetFileName()
+        {
+           return string.Format("{0}.xml",Text);
+        }
+
+        public string GetPath()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void BeforeSerialize()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AfterDeserialize()
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
     }
 }
