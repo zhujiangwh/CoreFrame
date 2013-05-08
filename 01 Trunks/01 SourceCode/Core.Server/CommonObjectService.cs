@@ -15,19 +15,103 @@ using Core.Serialize;
 namespace Core.Server
 {
 
+    /// <summary>
+    /// 序列化类型 ， xml json 等。
+    /// </summary>
+    public enum SerType
+    {
+        Xml , NHibernate , Json
+       }
 
+
+    /// <summary>
+    /// 功能服务接口创建 。 它只处理是本地方法还是采用远程接口。
+    /// </summary>
+    public class CommonObjectCreater
+    {
+        public static ICommonObjectService CreateCommonObjectService()
+        {
+            return new CommonObjectStorage();
+        }
+
+        public static ICommonObjectService CreateCommonObjectService(SerType serType)
+        {
+            ICommonObjectService service = CreateCommonObjectService();
+            return new CommonObjectStorage();
+        }
+
+
+   }
 
     public class CommonObjectService : RemotingService, ICommonObjectService
+    {
+        private CommonObjectStorage CommonObjectStorage { get; set; }
+
+        public CommonObjectService()
+        {
+            CommonObjectStorage = new CommonObjectStorage();
+         }
+
+
+        #region ICommonObjectService 成员
+
+        public object Create(object obj)
+        {
+            return CommonObjectStorage.Create(obj);
+        }
+
+        public void Update(object obj)
+        {
+            CommonObjectStorage.Update(obj);
+        }
+
+        public void Delete(object obj)
+        {
+            CommonObjectStorage.Delete(obj);
+        }
+
+        public T GetObject<T>(string key)
+        {
+            return CommonObjectStorage.GetObject<T>(key);
+        }
+
+        public IList GetObject(SqlScript sqlScript)
+        {
+            return CommonObjectStorage.GetObject(sqlScript);
+        }
+
+        public void RealDelete(object obj)
+        {
+             CommonObjectStorage.RealDelete(obj);
+        }
+
+        public bool SaveAllObject(IList objectList)
+        {
+            return CommonObjectStorage.SaveAllObject(objectList);
+        }
+
+        public IList GetAllObject()
+        {
+            return CommonObjectStorage.GetAllObject();
+        }
+
+        #endregion
+    }
+
+
+
+    public class CommonObjectStorage :  ICommonObjectService
     {
 
         public IObjectSerialize objectSerialize { get; set; }
 
-        public CommonObjectService()
+        public CommonObjectStorage()
         {
+            //根据配置，来确定使用哪一种序列器。
             objectSerialize = new XmlSerialize();
         }
 
-        public CommonObjectService(IObjectSerialize ser)
+        public CommonObjectStorage(IObjectSerialize ser)
         {
             objectSerialize = ser;
         }

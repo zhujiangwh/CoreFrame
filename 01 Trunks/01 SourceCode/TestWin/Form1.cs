@@ -12,6 +12,7 @@ using Core.Architecure;
 using Core.Metadata;
 using Core.Server;
 using Core.Serialize.XML;
+using Core.Common;
 
 namespace TestWin
 {
@@ -132,22 +133,14 @@ namespace TestWin
 
         private void button7_Click(object sender, EventArgs e)
         {
-            CommonObjectService service = new CommonObjectService(new XmlSerialize());
-
+            ICommonObjectService service = CommonObjectCreater.CreateCommonObjectService();
             service.Create(controlCreater);
-
-            
-
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            CommonObjectService service = new CommonObjectService(new XmlSerialize());
-
+            ICommonObjectService service = CommonObjectCreater.CreateCommonObjectService();
             controlCreater = service.GetObject<ControlCreater>("formde") ;
-
-
-
         }
     }
 }

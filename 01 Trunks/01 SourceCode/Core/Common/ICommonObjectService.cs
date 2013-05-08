@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using Core.Serialize.DB;
 using System.Collections;
+using Core.Serialize;
 
 namespace Core.Common
 {
     public interface ICommonObjectService
     {
-        /// <summary>
+
+         /// <summary>
         /// 
         /// </summary>
         /// <param name="obj"></param>
