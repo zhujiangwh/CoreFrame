@@ -159,5 +159,23 @@ namespace TestWin
 
             //XmlSerializeDefineManager k = service.GetObject<XmlSerializeDefineManager>("对象序列化配置");
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            ICommonObjectService service = CommonObjectCreater.CreateCommonObjectService();
+
+            BusiObjectPool pool = BusiObjectPool.GetInstance();
+            BusiObjectDefine b = new BusiObjectDefine();
+            b.FullClassName = "classname";
+            b.BusiObjectDefi = new ObjectDefine("assembly", "name");
+
+            pool.BusiObjectDefineList.Add(b);
+
+
+
+            service.Create(pool);
+
+
+        }
     }
 }
