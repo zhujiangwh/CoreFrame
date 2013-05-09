@@ -181,7 +181,7 @@ namespace Core.UI
 
         public string GetFileName()
         {
-           return string.Format("{0}.xml",Text);
+           return string.Format("{0}",Text);
         }
 
         public string GetPath()

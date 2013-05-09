@@ -8,11 +8,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Core.Serialize.XML.XmlSerializeService">
-    <Position X="2.5" Y="0.75" Width="1.5" />
+    <Position X="1.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAgAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAABA=</HashCode>
       <FileName>Serialize\XML\XmlSerializeService.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="XmlSerializeDefineManager" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Core.Serialize.XML.XmlSerializeDefineManager">
     <Position X="4.5" Y="0.75" Width="2.5" />

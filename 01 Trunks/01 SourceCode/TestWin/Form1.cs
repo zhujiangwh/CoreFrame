@@ -25,7 +25,7 @@ namespace TestWin
             InitializeComponent();
         }
 
-        private ControlCreater controlCreater ;//= new ControlCreater();
+        private ControlCreater controlCreater;//= new ControlCreater();
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace TestWin
             c2.Width = 200;
             c2.Heigth = 100;
 
- 
+
             //测试一下代码。
 
 
@@ -107,7 +107,7 @@ namespace TestWin
             controlCreater.Create();
 
 
-            
+
 
 
         }
@@ -140,7 +140,24 @@ namespace TestWin
         private void button8_Click(object sender, EventArgs e)
         {
             ICommonObjectService service = CommonObjectCreater.CreateCommonObjectService();
-            controlCreater = service.GetObject<ControlCreater>("formde") ;
+            controlCreater = service.GetObject<ControlCreater>("formde");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            ICommonObjectService service = CommonObjectCreater.CreateCommonObjectService();
+
+            XmlSerializeDefineManager ma =  XmlSerializeDefineManager.GetInstance();
+            service.Create(ma);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            XmlSerializeDefineManager ma = XmlSerializeDefineManager.GetInstance();
+
+            //ICommonObjectService service = CommonObjectCreater.CreateCommonObjectService();
+
+            //XmlSerializeDefineManager k = service.GetObject<XmlSerializeDefineManager>("对象序列化配置");
         }
     }
 }

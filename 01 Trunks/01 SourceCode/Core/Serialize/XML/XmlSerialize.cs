@@ -12,17 +12,19 @@ namespace Core.Serialize.XML
 
         public void Save(object obj)
         {
-            IXmlSerialize xs = obj as IXmlSerialize;
+            XmlSerializeDefineManager.GetInstance().Save(obj);
 
-            if (xs != null)
-            {
-                //保存到文件。
-                string fileName = xs.GetFileName();
+            //IXmlSerialize xs = obj as IXmlSerialize;
 
-                //string fileName = "sdsdfj.xml";
+            //if (xs != null)
+            //{
+            //    //保存到文件。
+            //    string fileName = xs.GetFileName();
 
-                StreamTool.SerializeXML(obj, fileName);
-            }
+            //    //string fileName = "sdsdfj.xml";
+
+            //    StreamTool.SerializeXML(obj, fileName);
+            //}
         }
 
         public void Update(object obj)
@@ -38,7 +40,11 @@ namespace Core.Serialize.XML
         public T GetObject<T>(string Key)
         {
             // 
-            return StreamTool.DeserializeXml<T>(string.Format("{0}.xml",Key));
+
+            return XmlSerializeDefineManager.GetInstance().GetObject<T>(Key);//.Save(obj);
+
+
+            //return StreamTool.DeserializeXml<T>(string.Format("{0}.xml",Key));
         }
 
         public void RealDelete(object obj)
