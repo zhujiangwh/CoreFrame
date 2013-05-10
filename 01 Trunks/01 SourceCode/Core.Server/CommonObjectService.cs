@@ -1,48 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Core.Common;
-using NHibernate;
-using Core.DB.NHibernate;
-using Core.Serialize.DB;
 using System.Collections;
-using System.Data;
+using Core.Common;
+using Core.Serialize;
+using Core.Serialize.DB;
 using Core.Serialize.XML;
 using JZT.Utility;
-using Core.Serialize;
-using Core.Architecure;
 
 namespace Core.Server
 {
-
-    /// <summary>
-    /// 序列化类型 ， xml json 等。
-    /// </summary>
-    public enum SerType
-    {
-        Xml , NHibernate , Json
-       }
-
-
-    /// <summary>
-    /// 功能服务接口创建 。 它只处理是本地方法还是采用远程接口。
-    /// </summary>
-    public class CommonObjectCreater
-    {
-        public static ICommonObjectService CreateCommonObjectService()
-        {
-            return new CommonObjectStorage();
-        }
-
-        public static ICommonObjectService CreateCommonObjectService(SerType serType)
-        {
-            ICommonObjectService service = CreateCommonObjectService();
-            return new CommonObjectStorage();
-        }
-
-
-   }
 
     public class CommonObjectService : RemotingService, ICommonObjectService
     {
@@ -51,7 +16,7 @@ namespace Core.Server
         public CommonObjectService()
         {
             CommonObjectStorage = new CommonObjectStorage();
-         }
+        }
 
 
         #region ICommonObjectService 成员
@@ -83,7 +48,7 @@ namespace Core.Server
 
         public void RealDelete(object obj)
         {
-             CommonObjectStorage.RealDelete(obj);
+            CommonObjectStorage.RealDelete(obj);
         }
 
         public bool SaveAllObject(IList objectList)
@@ -99,9 +64,7 @@ namespace Core.Server
         #endregion
     }
 
-
-
-    public class CommonObjectStorage :  ICommonObjectService
+    public class CommonObjectStorage : ICommonObjectService
     {
 
         public IObjectSerialize objectSerialize { get; set; }
@@ -120,8 +83,24 @@ namespace Core.Server
 
         private Bo GetBO(object obj)
         {
-            Bo bo = new Bo(objectSerialize);
- 
+            //根据传入的对象，来确定BO .
+
+            string fullClassName = obj.GetType().FullName;
+            BusiObjectPool pool = BusiObjectPool.GetInstance();
+
+            BusiObjectDefine busiObjectDefine = pool[fullClassName];
+
+            Bo bo = null;
+            if (busiObjectDefine == null)
+            {
+                bo = new Bo(objectSerialize);
+            }
+            else
+            {
+                bo = busiObjectDefine.BusiObjectDefi.CreateObject() as Bo;
+                bo.objectSerialize = objectSerialize;
+            }
+
             return bo;
         }
 
@@ -162,6 +141,11 @@ namespace Core.Server
         public T GetObject<T>(string key)
         {
             Bo bo = new Bo(objectSerialize);
+
+
+
+            //Bo bo = GetBO(obj);
+
 
             return bo.GetObject<T>(key);
         }
@@ -325,218 +309,12 @@ namespace Core.Server
             //return service.XmlSerializeDefineManager.XmlSerializeDefineList;
         }
 
-  
 
-  
-        #endregion
-    }
 
-    [Serializable]
-    public class BusiObjectPool :IXmlSerialize
-    {
-        #region singleton
-        private static BusiObjectPool _instance;
-
-        public static BusiObjectPool GetInstance()
-        {
-            if (_instance == null)
-            {
-                _instance = new BusiObjectPool();
-            }
-
-            return _instance;
- 
-        }
-
-        private BusiObjectPool()
-        {
-            BusiObjectDefineList = new List<BusiObjectDefine>();
- 
-        }
-
-        #endregion
-
-        public virtual List<BusiObjectDefine> BusiObjectDefineList { get; set; }
-
-        #region IXmlSerialize 成员
-
-        public string GetFileName()
-        {
-            return "BoPool";
-        }
-
-        public string GetFileName(string key)
-        {
-            return key ;
-        }
-
-        public string GetPath()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void BeforeSerialize()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void AfterDeserialize()
-        {
-            throw new NotImplementedException();
-        }
 
         #endregion
     }
 
-    [Serializable]
-    public class BusiObjectDefine
-    {
-        public virtual string FullClassName { get; set; }
-
-        public virtual ObjectDefine BusiObjectDefi{ get; set; }
-
-    }
-
-    public class Bo : ICommonObjectService, ICommonBusiObject
-    {
-        private IObjectSerialize objectSerialize { get; set; }
-
-        public Bo(IObjectSerialize ser)
-        {
-            objectSerialize = ser;
-        }
-
-        #region ICommonObjectService 成员
 
 
-        public T GetObject<T>(string key)
-        {
-
-
-            return objectSerialize.GetObject<T>(key) ;
-
-        }
-
-
-        public object Create(object obj)
-        {
-            OnBeforeSave(obj);
-
-            //处理最后更新时间。
-            IUpdateTime updateTime = obj as IUpdateTime;
-            if (updateTime != null)
-            {
-                updateTime.CreateTime = DateTime.Now;
-                updateTime.LastModifyTime = DateTime.Now;
-            }
-
-            //处理GuidString接口
-            IGuidStringKey guidString = obj as IGuidStringKey;
-            if (guidString != null && string.IsNullOrEmpty(guidString.GuidString))
-            {
-                guidString.GuidString = Guid.NewGuid().ToString();
-            }
-
-            //保存对象, 自动 处理 主键 值。
-            //如果有 guidstring ,则也在里面赋值 。
-            objectSerialize.Save(obj);
-
-            OnAfterSave(obj);
-            return "";
-        }
-
-        public void Update(object obj)
-        {
-            OnBeforeUpdate(obj);
-            //处理最后更新时间。
-            IUpdateTime updateTime = obj as IUpdateTime;
-            if (updateTime != null)
-            {
-                updateTime.LastModifyTime = DateTime.Now;
-            }
-
-            objectSerialize.Update(obj);
-
-            OnAfterUpdate(obj);
-        }
-
-        public void Delete(object obj)
-        {
-            OnBeforeDelete(obj);
-
-            //处理最后更新时间。
-            IUpdateTime updateTime = obj as IUpdateTime;
-            if (updateTime != null)
-            {
-                updateTime.LastModifyTime = DateTime.Now;
-            }
-
-            //处理逻辑删除。
-            IDelteteFlag delteteFlag = obj as IDelteteFlag;
-            if (delteteFlag != null)
-            {
-                delteteFlag.DeleteFlag = false;
-            }
-            else
-            {
-                throw new Exception("未实现 IDelteteFlag 接口。");
-            }
-
-
-            //保存对象, 自动 处理 主键 值。
-            //如果有 guidstring ,则也在里面赋值 。
-            objectSerialize.Delete(obj);
-
-            OnAfterDelete(obj);
-        }
-
-        public IList GetObject(SqlScript sqlScript)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RealDelete(object obj)
-        {
-        }
-
-        public bool SaveAllObject(IList objectList)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IList GetAllObject()
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
-
-        #region ICommonBusiObject 成员
-
-        public void OnBeforeSave(object obj)
-        {
-        }
-
-        public void OnAfterSave(object obj)
-        {
-        }
-
-        public void OnBeforeUpdate(object obj)
-        {
-        }
-
-        public void OnAfterUpdate(object obj)
-        {
-         }
-
-        public void OnBeforeDelete(object obj)
-        {
-        }
-
-        public void OnAfterDelete(object obj)
-        {
-        }
-
-        #endregion
-    }
 }

@@ -42,13 +42,13 @@ namespace Core.Server
             {
                 softSystem = list[0] as SoftSystem;
 
-                SoftModuleBO service = new SoftModuleBO(NHService);
-                IList moduleList = service.GetSoftSystem(softSystem.GuidString);
+                //SoftModuleBO service = new SoftModuleBO(NHService);
+                //IList moduleList = service.GetSoftSystem(softSystem.GuidString);
 
-                foreach (object obj in moduleList)
-                {
-                    softSystem.SubMouduleList.Add(obj as SoftModule);
-                }
+                //foreach (object obj in moduleList)
+                //{
+                //    softSystem.SubMouduleList.Add(obj as SoftModule);
+                //}
             }
 
 

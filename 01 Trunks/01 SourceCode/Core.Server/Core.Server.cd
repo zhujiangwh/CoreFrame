@@ -3,14 +3,6 @@
   <Comment CommentText="完全的 代理类,用于在 remoting 信道调用 实际业务类.">
     <Position X="1.333" Y="5.456" Height="0.75" Width="1.7" />
   </Comment>
-  <Class Name="Core.Server.BusiObject">
-    <Position X="10.75" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAgAAAAAEAAAAAAAAAAAAAAgAgAAAAEAEQIAAA=</HashCode>
-      <FileName>BusiObject.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Class Name="Core.Server.RemotingService">
     <Position X="1.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
@@ -29,22 +21,12 @@
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Core.Server.Bo">
-    <Position X="8.5" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQAAAAgAAAAIEAAAASAAAQAAAEAkEAAAAAEAEAIAAA=</HashCode>
-      <FileName>CommonObjectService.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="objectSerialize" />
-    </ShowAsAssociation>
-    <Lollipop Position="0.2" />
-  </Class>
   <Class Name="Core.Server.CommonObjectCreater">
     <Position X="0.75" Y="6.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>CommonObjectService.cs</FileName>
+      <FileName>CommonObjectCreater.cs</FileName>
+      <NewMemberFileName>CommonObjectService.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Core.Server.CommonObjectService">
@@ -58,6 +40,22 @@
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="Core.Server.BusiObject">
+    <Position X="10.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAEAAAAAAAAAAAAAAgAgAAAAEAEQIAAA=</HashCode>
+      <FileName>BusiObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Core.Server.Bo">
+    <Position X="8.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAgAAAAIEAAAASAAAQAAAEAkEAAAAAEAEAIAAA=</HashCode>
+      <FileName>BusiObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Interface Name="Core.Serialize.IObjectSerialize">
     <Position X="5.5" Y="6.25" Width="1.5" />
     <TypeIdentifier />
@@ -66,7 +64,7 @@
     <Position X="3.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
-      <FileName>CommonObjectService.cs</FileName>
+      <FileName>CommonObjectCreater.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="微软雅黑" Size="9" />

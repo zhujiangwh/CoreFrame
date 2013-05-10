@@ -79,6 +79,8 @@
     <Compile Include="Authority\AuthorityBO.cs" />
     <Compile Include="Authority\AuthorityService.cs" />
     <Compile Include="BusiObject.cs" />
+    <Compile Include="BusiObjectDefine.cs" />
+    <Compile Include="CommonObjectCreater.cs" />
     <Compile Include="CommonObjectService.cs" />
     <Compile Include="EntityService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

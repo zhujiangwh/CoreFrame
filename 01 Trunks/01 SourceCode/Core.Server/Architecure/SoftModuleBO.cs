@@ -10,29 +10,29 @@ using Core.Common;
 
 namespace Core.Server
 {
-    public class SoftModuleBO:BusiObject
-    {
-        public SoftModuleBO()
-        { }
+    //public class softmodulebo : BusiObject
+    //{
+    //    public softmodulebo()
+    //    { }
 
-        public SoftModuleBO(NHiberanteService nhiberanteService)
-        {
-            NHService = nhiberanteService;
-        }
-
-  
-
-        public IList GetSoftSystem(string guidString)
-        {
-            string hql = " from SoftModule where SoftSystemGuidString = :SoftSystemGuidString ";
-            SqlScript sqlScript = new SqlScript(hql);
-            sqlScript.ParamList.Add(new SqlParam("SoftSystemGuidString", DbType.String, guidString));
-
-            return NHService.GetObject(sqlScript);
-        } 
-
-        
+    //    public softmodulebo(nhiberanteservice nhiberanteservice)
+    //    {
+    //        nhservice = nhiberanteservice;
+    //    }
 
 
-    }
+
+    //    public ilist getsoftsystem(string guidstring)
+    //    {
+    //        string hql = " from softmodule where softsystemguidstring = :softsystemguidstring ";
+    //        sqlscript sqlscript = new sqlscript(hql);
+    //        sqlscript.paramlist.add(new sqlparam("softsystemguidstring", dbtype.string, guidstring));
+
+    //        return nhservice.getobject(sqlscript);
+    //    }
+
+
+
+
+    //}
 }
