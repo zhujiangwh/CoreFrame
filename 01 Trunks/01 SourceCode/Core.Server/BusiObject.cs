@@ -15,6 +15,11 @@ namespace Core.Server
     {
         public IObjectSerialize objectSerialize { get; set; }
 
+        /// <summary>
+        /// 序列化类型定义，由本操作方法进行序列化定义，由它自己决定 是否会处理。
+        /// </summary>
+        public SerType SerType { get; set; }
+
         public Bo(IObjectSerialize ser)
         {
             objectSerialize = ser;
@@ -119,9 +124,10 @@ namespace Core.Server
         {
         }
 
-        public bool SaveAllObject(IList objectList)
+        public bool SaveAllObject(string fullClassName,IList objectList)
         {
-            throw new NotImplementedException();
+            return objectSerialize.SaveAllObject(fullClassName,objectList);
+            //throw new NotImplementedException();
         }
 
         public IList GetAllObject()
@@ -155,6 +161,22 @@ namespace Core.Server
 
         public virtual void OnAfterDelete(object obj)
         {
+        }
+
+        #endregion
+
+        #region ICommonObjectService 成员
+
+
+        public IList GetAllObject(string fullClassName)
+        {
+            return objectSerialize.GetAllObject(fullClassName);
+
+        }
+
+        public IList<T> GetAllObject<T>()
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

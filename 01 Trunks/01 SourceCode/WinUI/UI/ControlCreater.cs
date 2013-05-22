@@ -11,6 +11,7 @@ using Core.Serialize.XML;
 
 namespace Core.UI
 {
+    [Serializable]
     public class UIControlDefine
     {
 
@@ -78,6 +79,7 @@ namespace Core.UI
 
     }
 
+    [Serializable]
     public class ControlCreater : IXmlSerialize
     {
         [XmlIgnore]

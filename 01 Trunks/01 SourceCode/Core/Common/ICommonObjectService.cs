@@ -11,7 +11,7 @@ namespace Core.Common
     public interface ICommonObjectService
     {
 
-         /// <summary>
+        /// <summary>
         /// 
         /// </summary>
         /// <param name="obj"></param>
@@ -40,9 +40,14 @@ namespace Core.Common
         /// <param name="obj"></param>
         void RealDelete(object obj);
 
-        bool SaveAllObject(IList objectList);
+        bool SaveAllObject(string fullClassName,IList objectList);
 
         IList GetAllObject();
+
+        IList GetAllObject(string fullClassName);
+
+        IList<T> GetAllObject<T>();
+
 
     }
 }

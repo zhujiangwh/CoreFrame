@@ -141,6 +141,7 @@
     <Compile Include="Serialize\XML\XmlSerializeService.cs" />
     <Compile Include="UI\BaseControlAdapter.cs" />
     <Compile Include="UI\CommonUIinteractive.cs" />
+    <Compile Include="UI\ControlCreater.cs" />
     <Compile Include="UI\EditAllObjectUIC.cs" />
     <Compile Include="UI\EditSingleObjectUIC.cs" />
     <Compile Include="UI\ISelectObjectService.cs" />

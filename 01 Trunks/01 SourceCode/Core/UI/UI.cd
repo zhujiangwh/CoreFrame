@@ -17,13 +17,13 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Core.UI.CommonUIinteractive">
-    <Position X="2.75" Y="3.5" Width="1.5" />
+    <Position X="2.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAIEAAAAAIQACAAAAAEQAAAAAAIAAQoAAAIACAAA=</HashCode>
       <FileName>UI\CommonUIinteractive.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Core.UI.EditSingleObjectUIC" Collapsed="true">
+  <Class Name="Core.UI.EditSingleObjectUIC">
     <Position X="4.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAIAAAAAAIQACAAAAAEQAAAAAAAAAQEAAAAACAAA=</HashCode>
@@ -31,7 +31,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Core.UI.SelectObjectUIC">
-    <Position X="6.75" Y="3.5" Width="1.5" />
+    <Position X="6.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgIAAAAAAIIAAkEABIICAAQA0IAAAAAACAAgAAAAAAA=</HashCode>
       <FileName>UI\SelectObjectUIC.cs</FileName>

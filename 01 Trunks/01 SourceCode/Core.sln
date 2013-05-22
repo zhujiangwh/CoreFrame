@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWin", "TestWin\TestWin.
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{0EDF779E-A8DB-46F3-983B-901FEF9A6ABD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Component", "Core.Component\Core.Component.csproj", "{02AB8CF1-2981-484C-939D-D910C26D087D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,14 @@ Global
 		{0EDF779E-A8DB-46F3-983B-901FEF9A6ABD}.Release|Any CPU.ActiveCfg = Release
 		{0EDF779E-A8DB-46F3-983B-901FEF9A6ABD}.Release|x64.ActiveCfg = Release
 		{0EDF779E-A8DB-46F3-983B-901FEF9A6ABD}.Release|x86.ActiveCfg = Release
+		{02AB8CF1-2981-484C-939D-D910C26D087D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02AB8CF1-2981-484C-939D-D910C26D087D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02AB8CF1-2981-484C-939D-D910C26D087D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{02AB8CF1-2981-484C-939D-D910C26D087D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{02AB8CF1-2981-484C-939D-D910C26D087D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02AB8CF1-2981-484C-939D-D910C26D087D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02AB8CF1-2981-484C-939D-D910C26D087D}.Release|x64.ActiveCfg = Release|Any CPU
+		{02AB8CF1-2981-484C-939D-D910C26D087D}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

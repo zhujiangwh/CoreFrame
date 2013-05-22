@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Collections;
 using System.Windows.Forms;
+using Core.Architecure;
+using Core.Common;
+using Core.Metadata;
+using Core.Serialize.XML;
+using Core.Server;
 using Core.UI;
 using JZT.Utility;
-using Core.Architecure;
-using Core.Metadata;
-using Core.Server;
-using Core.Serialize.XML;
-using Core.Common;
 
 namespace TestWin
 {
@@ -181,6 +176,64 @@ namespace TestWin
         private void button12_Click(object sender, EventArgs e)
         {
             ICommonObjectService service = CommonObjectCreater.CreateCommonObjectService();
+
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            EditAllObjectUIC uic = new EditAllObjectUIC();
+
+            uic.EditAllObjectDisplayUIDefine.AssemblyName = "WinUI";
+            uic.EditAllObjectDisplayUIDefine.FullClassName = "Core.UI.EditAllObjectForm";
+
+            uic.ObjectTypeDefine.AssemblyName = "Core";
+            uic.ObjectTypeDefine.FullClassName = //"Core.UI.SelectObjectUIC";
+            //    "Core.Serialize.XML.XmlSerializeDefine";
+            "Core.Authority.Function";
+
+            uic.service = CommonObjectCreater.CreateCommonObjectService();
+
+            uic.Initial();
+
+
+            DispalyForm(uic.EditAllObjectDisplayUI as Form);
+
+        }
+
+        private void DispalyForm(Form form)
+        {
+            form.Show();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            XmlSerializeDefine xmlSerializeDefine = new XmlSerializeDefine("Core.Serialize.XML.XmlSerializeDefine", "XXX", "");
+
+            //IList<XmlSerializeDefine> list = new List();
+
+            ArrayList l = new ArrayList(); 
+
+
+
+            l.Add(new XmlSerializeDefine("1", "1", "1"));
+            l.Add(new XmlSerializeDefine("2", "2", "2"));
+            l.Add(new XmlSerializeDefine("3", "3", "3"));
+
+
+
+            //xmlSerializeDefine.SaveAllObject(l);
+
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            XmlSerializeDefine xmlSerializeDefine = new XmlSerializeDefine("Core.Serialize.XML.XmlSerializeDefine", "XXX", "");
+
+            IList list = xmlSerializeDefine.GetAllObject();
+
+            xmlSerializeDefine.SaveAllObject(list);
 
 
         }

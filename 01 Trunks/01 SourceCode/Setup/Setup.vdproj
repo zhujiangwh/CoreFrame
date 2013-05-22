@@ -68,6 +68,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -85,6 +93,14 @@
         {
             "LaunchCondition"
             {
+                "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_416F8672EED14FD4A3039CD09A349CA6"
+                {
+                "Name" = "8:.NET Framework"
+                "Message" = "8:[VSDNETMSG]"
+                "FrameworkVersion" = "8:.NETFramework,Version=v3.5"
+                "AllowLaterVersions" = "11:FALSE"
+                "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=131000"
+                }
             }
         }
         "File"
@@ -132,6 +148,13 @@
         }
         "LaunchCondition"
         {
+            "{836E08B8-0285-4809-BA42-01DB6754A45D}:_E0A504D7F0974F6FA5A92AF118F3F256"
+            {
+            "Name" = "8:Condition1"
+            "Condition" = "8:"
+            "Message" = "8:<错误信息>"
+            "InstallUrl" = "8:"
+            }
         }
         "Locator"
         {
@@ -146,7 +169,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup"
         "ProductCode" = "8:{FD7E24B4-83D9-4251-887B-02683DD4F7F7}"
-        "PackageCode" = "8:{AB3ED276-F411-47F2-B450-1AC382C07796}"
+        "PackageCode" = "8:{B43E1653-6F8D-4E38-9E1D-670483CD0B2F}"
         "UpgradeCode" = "8:{61772E17-DD1C-464F-84D0-59917F91CAC2}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

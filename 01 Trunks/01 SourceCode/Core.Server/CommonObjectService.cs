@@ -51,14 +51,29 @@ namespace Core.Server
             CommonObjectStorage.RealDelete(obj);
         }
 
-        public bool SaveAllObject(IList objectList)
+        public bool SaveAllObject(string fullClassName ,IList objectList)
         {
-            return CommonObjectStorage.SaveAllObject(objectList);
+            return CommonObjectStorage.SaveAllObject(fullClassName,objectList);
         }
 
         public IList GetAllObject()
         {
             return CommonObjectStorage.GetAllObject();
+        }
+
+        #endregion
+
+        #region ICommonObjectService 成员
+
+
+        public IList GetAllObject(string fullClassName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public System.Collections.Generic.IList<T> GetAllObject<T>()
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -84,8 +99,14 @@ namespace Core.Server
         private Bo GetBO(object obj)
         {
             //根据传入的对象，来确定BO .
-
             string fullClassName = obj.GetType().FullName;
+
+            return GetBO(fullClassName);
+
+        }
+
+        private Bo GetBO(string fullClassName)
+        {
             BusiObjectPool pool = BusiObjectPool.GetInstance();
 
             BusiObjectDefine busiObjectDefine = pool[fullClassName];
@@ -102,7 +123,12 @@ namespace Core.Server
             }
 
             return bo;
+
         }
+
+
+
+
 
         private ICommonBusiObject GetRealBusiObject(object obj)
         {
@@ -261,8 +287,13 @@ namespace Core.Server
         #region ICommonObjectService 成员
 
 
-        public bool SaveAllObject(IList objectList)
+        public bool SaveAllObject(string fullClassName ,IList objectList)
         {
+            Bo bo = GetBO(fullClassName);
+
+            return bo.SaveAllObject(fullClassName, objectList);
+
+
             //XmlSerializeService service = new XmlSerializeService();
 
             //service.XmlSerializeDefineManager.LoadXmlSerializeDefineList(objectList);
@@ -311,6 +342,26 @@ namespace Core.Server
 
 
 
+
+        #endregion
+
+        #region ICommonObjectService 成员
+
+
+        public IList GetAllObject(string fullClassName)
+        {
+            Bo bo = GetBO(fullClassName);
+
+            return bo.GetAllObject(fullClassName);
+
+            //
+            throw new NotImplementedException();
+        }
+
+        public System.Collections.Generic.IList<T> GetAllObject<T>()
+        {
+            throw new NotImplementedException();
+        }
 
         #endregion
     }

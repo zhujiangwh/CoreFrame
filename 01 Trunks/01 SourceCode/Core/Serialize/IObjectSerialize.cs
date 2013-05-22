@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Collections;
 
 namespace Core.Serialize
 {
@@ -27,5 +28,13 @@ namespace Core.Serialize
         /// </summary>
         /// <param name="obj"></param>
         void RealDelete(object obj);
+
+        IList GetAllObject(string fullClassName);
+
+        bool SaveAllObject( string fullClassName ,IList list);
+
+
+
+
     }
 }

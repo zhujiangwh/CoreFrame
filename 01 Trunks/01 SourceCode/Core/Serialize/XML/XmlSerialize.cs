@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using JZT.Utility;
+using System.Collections;
 
 namespace Core.Serialize.XML
 {
-    public class XmlSerialize :IObjectSerialize
+    public class XmlSerialize : IObjectSerialize
     {
         #region IObjectSerialize 成员
 
@@ -50,6 +51,38 @@ namespace Core.Serialize.XML
         public void RealDelete(object obj)
         {
             //删除文件
+        }
+
+        #endregion
+
+        #region IObjectSerialize 成员
+
+
+        public IList GetAllObject(string fullClassName)
+        {
+            XmlSerializeDefineManager XmlSerializeDefineManager = XmlSerializeDefineManager.GetInstance();
+
+            XmlSerializeDefine XmlSerializeDefine = XmlSerializeDefineManager[fullClassName];
+
+            return XmlSerializeDefine.GetAllObject();
+        }
+
+        #endregion
+
+        #region IObjectSerialize 成员
+
+
+        public bool SaveAllObject( string fullClassName ,IList list)
+        {
+            XmlSerializeDefineManager XmlSerializeDefineManager = XmlSerializeDefineManager.GetInstance();
+
+            XmlSerializeDefine XmlSerializeDefine = XmlSerializeDefineManager[fullClassName];
+
+            XmlSerializeDefine.SaveAllObject(list);
+
+            return true;
+
+            throw new NotImplementedException();
         }
 
         #endregion
