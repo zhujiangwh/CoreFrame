@@ -16,9 +16,6 @@
       <HashCode>AAQAAAAAAAAAIAAAAASAAAQAAAEAEEAABAgAAAAAAAA=</HashCode>
       <FileName>CommonObjectService.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="objectSerialize" />
-    </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Core.Server.CommonObjectCreater">
@@ -51,7 +48,7 @@
   <Class Name="Core.Server.Bo">
     <Position X="8.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAgAAAAIEAAAASAAAQAAAEAkEAAAAAEAEAIAAA=</HashCode>
+      <HashCode>AAQAAAAgAAAAIEAAAASAAAQAAAEAkEAQAAAEAEAIAAA=</HashCode>
       <FileName>BusiObject.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

@@ -8,6 +8,7 @@ using Core.Serialize.XML;
 using Core.Server;
 using Core.UI;
 using JZT.Utility;
+using System.Reflection;
 
 namespace TestWin
 {
@@ -190,7 +191,8 @@ namespace TestWin
             uic.ObjectTypeDefine.AssemblyName = "Core";
             uic.ObjectTypeDefine.FullClassName = //"Core.UI.SelectObjectUIC";
             //    "Core.Serialize.XML.XmlSerializeDefine";
-            "Core.Authority.Function";
+            //"Core.Authority.Function";
+            "Core.Architecure.ObjectDefine";
 
             uic.service = CommonObjectCreater.CreateCommonObjectService();
 
@@ -229,11 +231,36 @@ namespace TestWin
 
         private void button15_Click(object sender, EventArgs e)
         {
-            XmlSerializeDefine xmlSerializeDefine = new XmlSerializeDefine("Core.Serialize.XML.XmlSerializeDefine", "XXX", "");
+            XmlSerializeDefine xmlSerializeDefine = new XmlSerializeDefine("Core.Architecure.ObjectDefine", "XXX", "");
 
             IList list = xmlSerializeDefine.GetAllObject();
 
             xmlSerializeDefine.SaveAllObject(list);
+
+
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            AppDomain app = AppDomain.CurrentDomain;
+
+            Assembly asm = Assembly.Load("Core");//.LoadFrom("Core.dll");
+
+            Type[] s = asm.GetTypes();
+
+            ArrayList arrayList  = new ArrayList();
+
+            foreach ( Type t in s)
+            {
+                ObjectDefine objectDefine = new ObjectDefine(t);
+
+                arrayList.Add(objectDefine);
+
+
+            }
+
+
+            
 
 
         }

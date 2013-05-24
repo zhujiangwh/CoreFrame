@@ -25,6 +25,13 @@ namespace Core.Architecure
             FullClassName = fullClassName;
         }
 
+        public ObjectDefine(Type type)
+        {
+            AssemblyName = type.Assembly.FullName ;
+            FullClassName = type.FullName;
+        }
+
+
         public virtual object CreateObject()
         {
             object obj = null;

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
+using System.Reflection;
+using Core.Architecure;
 
 namespace Core.UI
 {
@@ -65,6 +67,27 @@ namespace Core.UI
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             EditAllObjectUIC.NewObject();
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            Assembly asm = Assembly.Load("Core");//.LoadFrom("Core.dll");
+
+            Type[] s = asm.GetTypes();
+
+            ArrayList arrayList = new ArrayList();
+
+            foreach (Type t in s)
+            {
+                ObjectDefine objectDefine = new ObjectDefine(t);
+
+                arrayList.Add(objectDefine);
+
+
+            }
+
+            EditAllObjectUIC.EditObjectList = arrayList;
+
         }
     }
 }
