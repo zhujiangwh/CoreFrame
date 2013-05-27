@@ -99,6 +99,24 @@
     <Compile Include="Metadata\CSharpDefine\EditCSharpClassControl.Designer.cs">
       <DependentUpon>EditCSharpClassControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Metadata\CSharpDefine\EditCSharpPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Metadata\CSharpDefine\EditCSharpPropertyControl.Designer.cs">
+      <DependentUpon>EditCSharpPropertyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metadata\EditDomainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Metadata\EditDomainControl.Designer.cs">
+      <DependentUpon>EditDomainControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metadata\EditDomainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metadata\EditDomainForm.Designer.cs">
+      <DependentUpon>EditDomainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Metadata\EditEntityControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -152,6 +170,15 @@
     <EmbeddedResource Include="Metadata\CSharpDefine\EditCSharpClassControl.resx">
       <DependentUpon>EditCSharpClassControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Metadata\CSharpDefine\EditCSharpPropertyControl.resx">
+      <DependentUpon>EditCSharpPropertyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metadata\EditDomainControl.resx">
+      <DependentUpon>EditDomainControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metadata\EditDomainForm.resx">
+      <DependentUpon>EditDomainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Metadata\EditEntityControl.resx">
       <DependentUpon>EditEntityControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,7 +208,10 @@
   <ItemGroup>
     <None Include="Properties\DataSources\Core.Architecure.SoftModule.datasource" />
     <None Include="Properties\DataSources\Core.Architecure.SoftSystem.datasource" />
+    <None Include="Properties\DataSources\Core.Metadata.CSharpDesign.ClassPropertyDefine1.datasource" />
     <None Include="Properties\DataSources\Core.Metadata.DataItem.datasource" />
+    <None Include="Properties\DataSources\Core.Metadata.DataItemDisplayer.datasource" />
+    <None Include="Properties\DataSources\Core.Metadata.Domain.datasource" />
     <None Include="Properties\DataSources\Core.Metadata.Entity.datasource" />
     <None Include="UI\UI.cd" />
   </ItemGroup>

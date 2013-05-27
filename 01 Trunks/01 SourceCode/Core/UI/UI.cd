@@ -51,5 +51,12 @@
       <FileName>UI\EditSingleObjectUIC.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="Core.IObjectEditer">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>IObjectEditer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="微软雅黑" Size="9" />
 </ClassDiagram>

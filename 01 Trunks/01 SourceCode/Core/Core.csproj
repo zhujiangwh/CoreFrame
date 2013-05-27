@@ -93,6 +93,7 @@
     <Compile Include="Common\ICommonObjectService.cs" />
     <Compile Include="Common\LevelString.cs" />
     <Compile Include="Common\ObjectConfig.cs" />
+    <Compile Include="IObjectEditer.cs" />
     <Compile Include="Metadata\CSharpDesign\CSharpClassDefing.cs" />
     <Compile Include="Metadata\DataItem.cs" />
     <Compile Include="Metadata\DisplayDefine.cs" />

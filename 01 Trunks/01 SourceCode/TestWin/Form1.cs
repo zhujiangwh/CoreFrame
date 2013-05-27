@@ -264,5 +264,11 @@ namespace TestWin
 
 
         }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            EditDomainForm form = new EditDomainForm();
+            form.ShowDialog();
+        }
     }
 }

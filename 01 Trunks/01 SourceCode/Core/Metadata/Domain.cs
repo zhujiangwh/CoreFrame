@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Core.Metadata.CSharpDesign;
 
 namespace Core.Metadata
 {
@@ -10,9 +11,9 @@ namespace Core.Metadata
     {
         public Domain()
         {
-            ClassPropertyDefine = new Core.Metadata.CSharpDesign.ClassPropertyDefine() ;
+            ClassPropertyDefine = new ClassPropertyDefine() ;
         }
 
-        public Core.Metadata.CSharpDesign.ClassPropertyDefine ClassPropertyDefine { get; set; }
+        public ClassPropertyDefine ClassPropertyDefine { get; set; }
     }
 }

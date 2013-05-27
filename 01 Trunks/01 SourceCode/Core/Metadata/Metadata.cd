@@ -26,14 +26,11 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Core.Metadata.Domain">
-    <Position X="4.75" Y="5.75" Width="1.5" />
+    <Position X="3.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Metadata\Domain.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="ClassPropertyDefine" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Core.Metadata.BusiDataItem">
     <Position X="7.25" Y="5.75" Width="1.75" />
@@ -53,7 +50,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Core.BusiType.BillIDField">
-    <Position X="3.25" Y="7.75" Width="1.5" />
+    <Position X="1.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BusiType\BillIDField.cs</FileName>

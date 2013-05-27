@@ -152,13 +152,17 @@ namespace {1}
         [XmlAttribute]
         public virtual string DataItemName { get; set; }
         [XmlAttribute]
-        public virtual string PropertyName { get; set; }
+        public virtual string PropertyName 
+        { get; set; }
         [XmlAttribute]
         public virtual string DataType { get; set; }
         [XmlAttribute]
         public virtual string Caption { get; set; }
         [XmlAttribute]
         public virtual bool IsXML { get; set; }
+
+        [XmlIgnore]
+        public virtual string Cripe { get; set; }
 
 
 
