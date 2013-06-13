@@ -24,6 +24,7 @@ namespace Core.DB
             Initial(dbServer);
         }
 
+
         public void Initial(DBServer dbServer)
         {
             Configuration cfg = new Configuration();
