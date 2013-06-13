@@ -267,8 +267,37 @@ namespace TestWin
 
         private void button17_Click(object sender, EventArgs e)
         {
-            EditDomainForm form = new EditDomainForm();
-            form.ShowDialog();
+            //EditDomainForm form = new EditDomainForm();
+            //form.ShowDialog();
+
+
+            EditAllObjectUIC uic = new EditAllObjectUIC();
+
+            uic.EditAllObjectDisplayUIDefine.AssemblyName = "WinUI";
+            uic.EditAllObjectDisplayUIDefine.FullClassName = "Core.UI.EditAllObjectForm";
+
+            uic.EditObjectControlDefine.AssemblyName = "WinUI";
+            uic.EditObjectControlDefine.FullClassName = "Core.Metadata.EditDomainControl";
+
+            //uic.EditObjectControlDefine.FullClassName = "Core.UI.EditObjectControl";
+
+
+
+
+            uic.ObjectTypeDefine.AssemblyName = "Core";
+            uic.ObjectTypeDefine.FullClassName = //"Core.UI.SelectObjectUIC";
+                //    "Core.Serialize.XML.XmlSerializeDefine";
+                //"Core.Authority.Function";
+            "Core.Metadata.Domain";
+
+            uic.service = CommonObjectCreater.CreateCommonObjectService();
+
+            uic.Initial();
+
+
+            DispalyForm(uic.EditAllObjectDisplayUI as Form);
+
+
         }
     }
 }

@@ -28,6 +28,7 @@ namespace Core.Architecure
         public static object DeserializeXml(string fileName, Type tp)
         {
             if (!File.Exists(fileName)) return null;
+
             XmlSerializer ser = new XmlSerializer(tp);
             object o = null;
             try
@@ -80,6 +81,9 @@ namespace Core.Architecure
 
             IsDisplayFlashForm = true;
 
+            StartService = new StartService();
+
+
         }
 
         #endregion
@@ -113,7 +117,7 @@ namespace Core.Architecure
         //    DBServerManager = new DBServerManager();
         //}
 
-        [XmlIgnore]
+        //[XmlIgnore]
         public StartService StartService { get; set; }
 
         public void Run()
@@ -160,12 +164,14 @@ namespace Core.Architecure
 
 
             //启动初始经化
-            StartService = new StartService();
 
-            StartService.Initial();
+            if (IsUseRemoting)
+            {
+                StartService.Initial();
 
-            StartService.Execute();
+                StartService.Execute();
 
+            }
 
 
         }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Runtime.Remoting;
 using System.Threading;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace Core.Architecure
 {
@@ -14,6 +15,7 @@ namespace Core.Architecure
     }
 
     #region 定义系统启动项。
+
 
     public class BaseStartItem
     {
@@ -30,6 +32,7 @@ namespace Core.Architecure
         }
     }
 
+    [Serializable]
     public class RemotingStart : BaseStartItem
     {
         public RemotingStart()
@@ -43,12 +46,13 @@ namespace Core.Architecure
 
             RemotingConfiguration.Configure(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
 
-            Thread.Sleep(5000);
+            //Thread.Sleep(5000);
 
         }
  
     }
 
+    [Serializable]
     public class SleepStart : BaseStartItem
     {
         public SleepStart()
@@ -79,8 +83,12 @@ namespace Core.Architecure
         public bool IsDisplayFlashForm { get; set; }
         public ObjectDefine StartItemDisplayerDefine { get; set; }
 
+        public bool IsLoadRemoting { get; set; }
+
+        [XmlIgnore]
         public IStartItemDisplayer StartItemDisplayer { get; set; }
 
+        [XmlIgnore]
         public List<BaseStartItem> StartItemList { get; set; }
 
         public StartService()
@@ -93,20 +101,24 @@ namespace Core.Architecure
             RemotingStart RemotingStart = new RemotingStart();
             SleepStart sleepStart2 = new SleepStart();
 
-            StartItemList.Add(SleepStart1);
-            StartItemList.Add(RemotingStart);
-            StartItemList.Add(sleepStart2);
+            //if (IsLoadRemoting)
+            {
+                //StartItemList.Add(SleepStart1);
+                StartItemList.Add(RemotingStart);
+                //StartItemList.Add(sleepStart2);
+            }
 
         }
 
+        [XmlIgnore]
         public Form SplashForm;
 
         public void Initial()
         {
-            StartItemDisplayerDefine.AssemblyName = "Server";
-            StartItemDisplayerDefine.FullClassName = "Server.SplashForm";
+            //StartItemDisplayerDefine.AssemblyName = "Server";
+            //StartItemDisplayerDefine.FullClassName = "Server.SplashForm";
 
-                IsDisplayFlashForm = true;
+            //IsDisplayFlashForm = true;
 
             if (IsDisplayFlashForm)
             {

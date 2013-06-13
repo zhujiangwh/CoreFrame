@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Core.UI;
-using Core.Server;
-using Core.Serialize.XML;
-using NHibernate;
-using System.Data;
-using System.Data.Common;
-using System.Data.OleDb;
-using System.Data.SqlClient;
+﻿using System.Data;
 using Core.Architecure;
 using Core.DB;
+using Core.Serialize.XML;
+using Core.Server;
+using Core.UI;
 
 namespace Core
 {

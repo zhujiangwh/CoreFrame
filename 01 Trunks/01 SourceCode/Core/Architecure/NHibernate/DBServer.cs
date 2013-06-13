@@ -5,9 +5,9 @@ using System.Data;
 using System.Data.OleDb;
 using System.Xml.Serialization;
 using Core.Architecure;
+using Core.DB.NHibernate;
 using NHibernate;
 using NHibernate.Cfg;
-using Core.DB.NHibernate;
 
 namespace Core.DB
 {
@@ -147,7 +147,7 @@ namespace Core.DB
             switch (DataBaseType)
             {
                 case DataBaseType.SQLServer:
-                    connection = @"Data source={0}/{1};User Id={2};Password={3};Min Pool Size={4};Max Pool Size={5}";
+                    connection = @"Data source={0}; Initial Catalog ={1};User Id={2};Password={3};Min Pool Size={4};Max Pool Size={5}";
                     nhConnection = string.Format(connection, IPAddress, Database, UserID, Password, MinPoolSize, MaxPoolSize);
                     break;
                 case DataBaseType.Oracle:
@@ -184,7 +184,6 @@ namespace Core.DB
                 default:
                     break;
             }
-
 
             return con; ;
         }

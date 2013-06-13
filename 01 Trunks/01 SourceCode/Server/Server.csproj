@@ -131,6 +131,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="hibernate.cfg.xml">
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +150,10 @@
     <ProjectReference Include="..\HBM_SQLite\HBM_SQLite.csproj">
       <Project>{357F6997-9006-4130-A1BA-D8C4EC4B57C6}</Project>
       <Name>HBM_SQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HBM_SQL\HBM_SQL.csproj">
+      <Project>{0941B6C9-A014-4E84-93F8-72DF160D3D9B}</Project>
+      <Name>HBM_SQL</Name>
     </ProjectReference>
     <ProjectReference Include="..\JZT.Utility\JZT.Utility.csproj">
       <Project>{51B7F628-5AC5-47B0-8175-A827D4D8E309}</Project>

@@ -9,4 +9,22 @@
   <RemotingServer IPAddress="127.0.0.1:8545" Protocol="tcp" />
   <IsUseRemoting>false</IsUseRemoting>
   <IsDisplayFlashForm>true</IsDisplayFlashForm>
+  <StartService>
+    <IsDisplayFlashForm>false</IsDisplayFlashForm>
+    <StartItemDisplayerDefine />
+    <StartItemList />
+  </StartService>
 </WinApplication>
+
+<!--<?xml version="1.0" encoding="utf-8"?>
+<WinApplication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Caption>Core 客户端程序</Caption>
+  <MainFormDefine AssemblyName="WinUI" FullClassName="WinUI.MainForm" />
+  <SplashFormDefine AssemblyName="WinUI" FullClassName="Core.Authority.LoginForm" />
+  <DBServerManager>
+    <DBServerList />
+  </DBServerManager>
+  <RemotingServer IPAddress="127.0.0.1:8545" Protocol="tcp" />
+  <IsUseRemoting>false</IsUseRemoting>
+  <IsDisplayFlashForm>true</IsDisplayFlashForm>
+</WinApplication>-->

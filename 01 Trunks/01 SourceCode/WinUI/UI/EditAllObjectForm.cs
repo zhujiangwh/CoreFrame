@@ -37,6 +37,23 @@ namespace Core.UI
 
         public EditAllObjectUIC EditAllObjectUIC { get; set; }
 
+        public IObjectEditer ObjectEditer { get; set; }
+
+        public void AddEditControl( IObjectEditer objectEditer)
+        {
+
+            ObjectEditer = objectEditer;
+            Control con = objectEditer as Control;
+
+            if (con != null)
+            {
+                panel1.Controls.Add(con);
+
+                con.Dock = DockStyle.Fill;
+            }
+ 
+        }
+
         #endregion
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -50,7 +67,9 @@ namespace Core.UI
 
             if (listBox1.SelectedIndex >= 0)
             {
-                propertyGrid1.SelectedObject = list[listBox1.SelectedIndex];
+                //propertyGrid1.SelectedObject = list[listBox1.SelectedIndex];
+
+                ObjectEditer.EditedObject = list[listBox1.SelectedIndex];
             }
         }
 

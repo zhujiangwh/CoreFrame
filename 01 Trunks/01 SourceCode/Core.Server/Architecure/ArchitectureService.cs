@@ -7,6 +7,7 @@ using NHibernate;
 using System.Data;
 using System.Collections;
 using NHibernate.Cfg;
+using Core.DB;
 
 namespace Core.Server
 {
@@ -18,13 +19,16 @@ namespace Core.Server
 
         public SoftSystem GetSoftSystem(string guidString)
         {
+            DBServer server = WinApplication.GetInstance().DBServerManager.DBServerList[0];
+            NHService = server.GetNHiberanteService() ;
+
             SoftSystem softSystem = null;
-            //using (ISession session = NHService.Session)
+            using (ISession session = NHService.Session)
             {
-                //SoftSystemBO service = new SoftSystemBO(NHService);
-                //softSystem = service.GetSoftSystem(guidString);
+                SoftSystemBO service = new SoftSystemBO(NHService);
+                softSystem = service.GetSoftSystem(guidString);
             }
-            return null;// softSystem;
+            return softSystem;// softSystem;
         }
 
         public DataTable GetSoftSystem()
@@ -46,5 +50,7 @@ namespace Core.Server
         }
         #endregion
 
+
+        public DB.NHibernate.NHiberanteService NHService { get; set; }
     }
 }

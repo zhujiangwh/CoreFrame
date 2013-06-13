@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Core.Architecure;
 using Core.Common;
-using Core.Serialize.DB;
-using System.Data;
-using System.Collections;
 
 namespace Core.UI
 {

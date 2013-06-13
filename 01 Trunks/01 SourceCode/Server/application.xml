@@ -20,4 +20,5 @@
   <RemotingServer IPAddress="s" Protocol="dsf" />
   <IsUseRemoting>true</IsUseRemoting>
   <IsDisplayFlashForm>true</IsDisplayFlashForm>
+
 </WinApplication>

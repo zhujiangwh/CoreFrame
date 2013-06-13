@@ -138,6 +138,12 @@
     <Compile Include="UI\EditAllObjectForm.Designer.cs">
       <DependentUpon>EditAllObjectForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\EditObjectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\EditObjectControl.Designer.cs">
+      <DependentUpon>EditObjectControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\SelectObjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\EditAllObjectForm.resx">
       <DependentUpon>EditAllObjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\EditObjectControl.resx">
+      <DependentUpon>EditObjectControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SelectObjectForm.resx">
       <DependentUpon>SelectObjectForm.cs</DependentUpon>

@@ -130,7 +130,7 @@ namespace Core.Metadata
         #region IXmlSerialize 成员
 
 
-        public string GetFileName(string key)
+        public virtual string GetFileName(string key)
         {
             throw new NotImplementedException();
         }

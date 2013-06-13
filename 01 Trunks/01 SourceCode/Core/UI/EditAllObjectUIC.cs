@@ -22,6 +22,11 @@ namespace Core.UI
 
         EditAllObjectUIC EditAllObjectUIC { get; set; }
 
+        IObjectEditer ObjectEditer { get; set; }
+
+        void AddEditControl(IObjectEditer objectEditer);
+
+
     }
 
 
@@ -45,6 +50,16 @@ namespace Core.UI
         /// </summary>
         public virtual ObjectDefine EditAllObjectDisplayUIDefine { get; set; }
 
+        /// <summary>
+        /// 被编辑的对象.
+        /// </summary>
+        public virtual ObjectDefine EditObjectControlDefine { get; set; }
+
+        [XmlIgnore]
+        public virtual IObjectEditer EditObjectControl { get; set; }
+
+
+
         [XmlIgnore]
         public virtual IEditAllObjectDisplay EditAllObjectDisplayUI { get; set; }
 
@@ -57,6 +72,7 @@ namespace Core.UI
         {
             EditAllObjectDisplayUIDefine = new ObjectDefine();
             ObjectTypeDefine = new ObjectDefine();
+            EditObjectControlDefine = new ObjectDefine();
 
             EditObjectList = new ArrayList();
         }
@@ -70,8 +86,13 @@ namespace Core.UI
             EditAllObjectDisplayUI = EditAllObjectDisplayUIDefine.CreateObject() as IEditAllObjectDisplay;
             EditAllObjectDisplayUI.EditAllObjectUIC = this;
 
-            //初始化进 取回所有 对象 ， 这个对象可以由外界替换。。
+            //创建 界面 编辑控件
+            EditObjectControl = EditObjectControlDefine.CreateObject() as IObjectEditer;
 
+           //将新创建的控件添加到窗口中。
+           EditAllObjectDisplayUI.AddEditControl(EditObjectControl);
+
+            //初始化进 取回所有 对象 ， 这个对象可以由外界替换。。
             IList list = GetAllObject();
 
             if (list != null)

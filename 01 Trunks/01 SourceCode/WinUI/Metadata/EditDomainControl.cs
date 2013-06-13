@@ -37,7 +37,7 @@ namespace Core.Metadata
                     
                     bsDomain.DataSource = domain;
 
-                    comboBox1.SelectedIndex = (int)domain.BusiType;
+                    //comboBox1.SelectedIndex = (int)domain.BusiType;
 
                     editCSharpPropertyControl1.EditedObject = domain.ClassPropertyDefine;
                 }
